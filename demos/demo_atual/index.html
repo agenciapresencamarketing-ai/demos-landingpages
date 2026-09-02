@@ -171,7 +171,18 @@
   .checklist svg{width:22px;height:22px;flex-shrink:0;color:var(--cor-destaque);margin-top:1px;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
 
-  .hero-photo{height:460px;width:100%;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);border:1px solid rgba(0,0,0,0.05);}
+  /* AJUSTE PARA FOTOS 1440x1800 (PROPORÇÃO 4:5) SEM CORTAR */
+  .hero-photo{
+    height:auto;
+    max-height:550px;
+    width:100%;
+    aspect-ratio: 4 / 5;
+    object-fit:cover;
+    object-position:center;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+    border:1px solid rgba(0,0,0,0.05);
+  }
   .hero-badge{
     position:absolute;bottom:-22px;left:-22px;background:var(--branco);border-radius:var(--radius-md);
     box-shadow:var(--shadow-soft);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px;
@@ -283,7 +294,7 @@
   /* ---------- RESPONSIVO ---------- */
   @media (max-width:1000px){
     .split-grid, .split-grid-reverse{grid-template-columns:1fr;}
-    .hero-photo{height:340px;}
+    .hero-photo{max-height:450px;}
     .img-order-mobile{order:-1;}
     .testi-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
