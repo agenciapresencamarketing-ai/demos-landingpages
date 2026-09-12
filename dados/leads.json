@@ -5,5 +5,13 @@
     "WhatsApp": "5565999291550",
     "Demo": "https://demos-landingpages.vercel.app/demos/demo_atual",
     "Status": "Pendente"
+  },
+  {
+    "id": 1,
+    "Empresa": "planeta é o bicho",
+    "Nicho": "Clínica Veterinária",
+    "WhatsApp": "5565999536185",
+    "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
+    "Status": "Pendente"
   }
 ]
