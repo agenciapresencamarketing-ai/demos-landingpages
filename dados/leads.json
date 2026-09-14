@@ -13,5 +13,13 @@
     "WhatsApp": "5565999536185",
     "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
     "Status": "Processado"
+  },
+  {
+    "id": 2,
+    "Empresa": "São Miguel Solar",
+    "Nicho": "Energia Solar / Climatização",
+    "WhatsApp": "556536241252",
+    "Demo": "https://demos-landingpages.vercel.app/demos/solar_demo",
+    "Status": "Pendente"
   }
 ]
