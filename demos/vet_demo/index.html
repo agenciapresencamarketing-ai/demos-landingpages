@@ -3,24 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Planeta é o Bicho</title>
-<meta name="description" content="Planeta é o Bicho | Tudo o que seu Pet precisa, em um só lugar.">
+<title>Planeta É o bicho</title>
+<meta name="description" content="Planeta É o bicho | Tudo o que seu Pet precisa, em um só lugar. Venha nos conhecer!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
 <style>
   :root{
-    --laranja:#F25C05;
-    --laranja-hover:#D94E04;
-    --laranja-claro:#FDBA74;
-    --laranja-muito-claro:#FFEDD5;
-    --laranja-suave:#FFF7ED;
-    --branco:#FFFFFF;
-    --texto:#261C14;
+    /* Nova Paleta Clara e Alaranjada (Baseada no logo.webp) */
+    --primaria: #F37021; 
+    --primaria-hover: #D95E16; 
+    --secundaria-clara: #FCD5C0; 
+    --fundo-destaque: #FEF3EE; 
+    --branco: #FFFFFF;
+    --texto: #544943; /* Marrom suave no lugar de cinza/preto escuro */
+    --creme: #FFFCFA;
+    
     --radius-sm:10px;
     --radius-md:18px;
     --radius-lg:32px;
-    --shadow-soft:0 10px 30px rgba(242,92,5,.08);
+    --shadow-soft:0 10px 30px rgba(84, 73, 67, .07);
     --font-display:'Sacramento', cursive;
     --font-sans:'Poppins', sans-serif;
     --container:1180px;
@@ -46,17 +48,19 @@
   .container{max-width:var(--container);margin:0 auto;padding:0 24px;}
   section{padding:96px 0;}
   h1,h2,h3{font-weight:600;line-height:1.25;color:var(--texto);}
+  .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+  
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;
-    color:var(--laranja);margin-bottom:14px;
+    color:var(--primaria-hover);margin-bottom:14px;
   }
   .eyebrow::before{
-    content:"";width:22px;height:2px;background:var(--laranja);border-radius:2px;
+    content:"";width:22px;height:2px;background:var(--primaria);border-radius:2px;
   }
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .section-head p{color:#665343;font-size:16.5px;margin-top:14px;}
+  .section-head p{color:#82756E;font-size:16.5px;margin-top:14px;}
 
   /* Botões */
   .btn{
@@ -65,90 +69,126 @@
     transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--laranja);color:var(--branco);box-shadow:0 8px 20px rgba(242,92,5,.28);}
-  .btn-primary:hover{background:var(--laranja-hover);transform:translateY(-2px);}
-  .btn-outline{background:transparent;color:var(--laranja);border:1.5px solid var(--laranja);}
-  .btn-outline:hover{background:var(--laranja);color:var(--branco);transform:translateY(-2px);}
-  .btn-light{background:var(--branco);color:var(--laranja);}
-  .btn-light:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.12);}
+  .btn-primary{background:var(--primaria);color:var(--branco);box-shadow:0 8px 20px rgba(243, 112, 33, .25);}
+  .btn-primary:hover{background:var(--primaria-hover);transform:translateY(-2px);}
+  .btn-outline{background:transparent;color:var(--primaria-hover);border:1.5px solid var(--primaria);}
+  .btn-outline:hover{background:var(--primaria);color:var(--branco);transform:translateY(-2px);}
+  .btn-light{background:var(--branco);color:var(--primaria-hover);}
+  .btn-light:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08);}
   .btn:focus-visible, a:focus-visible, button:focus-visible{
-    outline:3px solid var(--laranja-claro); outline-offset:3px; border-radius:8px;
+    outline:3px solid var(--secundaria-clara); outline-offset:3px; border-radius:8px;
   }
 
   /* ---------- HEADER ---------- */
   header{
     position:sticky;top:0;z-index:100;
     background:rgba(255,255,255,.94);backdrop-filter:blur(8px);
-    border-bottom:1px solid var(--laranja-muito-claro);
+    border-bottom:1px solid var(--fundo-destaque);
   }
   .nav-wrap{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;}
   .logo{display:flex;align-items:center;gap:12px;}
   .logo-mark{width:46px;height:46px;flex-shrink:0;object-fit:contain;}
   .logo-text{display:flex;flex-direction:column;line-height:1;}
   .logo-text .eyebrow-logo{font-size:10.5px;letter-spacing:.16em;font-weight:600;color:var(--texto);text-transform:uppercase;}
-  .logo-text .brand-name{font-family:var(--font-display);font-size:32px;color:var(--laranja);line-height:1.1;}
+  .logo-text .brand-name{font-family:var(--font-display);font-size:32px;color:var(--primaria);line-height:1.1;}
   nav.main-nav ul{display:flex;gap:36px;align-items:center;}
   nav.main-nav a{font-size:15px;font-weight:500;color:var(--texto);position:relative;padding:4px 0;}
   nav.main-nav a::after{
-    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--laranja);
+    content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;background:var(--primaria);
     transition:width .2s ease;
   }
   nav.main-nav a:hover::after{width:100%;}
   .nav-actions{display:flex;align-items:center;gap:18px;}
-  .nav-phone{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#665343;}
-  .nav-phone svg{width:18px;height:18px;color:var(--laranja);}
+  .nav-phone{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#82756E;}
+  .nav-phone svg{width:18px;height:18px;color:var(--primaria);}
   .menu-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;}
   .menu-toggle svg{width:26px;height:26px;color:var(--texto);}
 
   /* ---------- GRADES DIVIDIDAS (HERO, SERVICOS, LOCAL) ---------- */
-  .bg-creme{background:var(--laranja-suave);}
-  .hero-watermark{position:absolute;top:-40px;right:-60px;width:420px;opacity:.08;pointer-events:none;color:var(--laranja);}
+  .bg-creme{background:var(--creme);}
+  .hero-watermark{position:absolute;top:-40px;right:-60px;width:420px;opacity:.05;pointer-events:none;color:var(--primaria);}
   .split-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;position:relative;z-index:1;}
   .split-grid-reverse{display:grid;grid-template-columns:.95fr 1.05fr;gap:56px;align-items:center;position:relative;z-index:1;}
   
   .split-grid h1, .split-grid-reverse h2{font-size:44px;letter-spacing:-.01em;margin-bottom:20px;}
   .split-grid h2{font-size:36px;letter-spacing:-.01em;margin-bottom:20px;}
-  .hero-sub{font-size:17px;color:#665343;max-width:520px;margin-bottom:32px;}
+  .hero-sub{font-size:17px;color:#82756E;max-width:520px;margin-bottom:32px;}
   
   .checklist{display:grid;gap:14px;margin-bottom:36px;}
   .checklist li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--texto);}
-  .checklist svg{width:22px;height:22px;flex-shrink:0;color:var(--laranja);margin-top:1px;}
+  .checklist svg{width:22px;height:22px;flex-shrink:0;color:var(--primaria);margin-top:1px;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
 
-  .hero-photo{height:460px;width:100%;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);border:1px solid var(--laranja-muito-claro);}
+  .hero-photo{height:460px;width:100%;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);border:1px solid var(--fundo-destaque);}
+
+  /* Badge simplificado */
   .hero-badge{
-    position:absolute;bottom:-22px;left:-22px;background:var(--branco);border-radius:var(--radius-md);
-    box-shadow:var(--shadow-soft);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px;
-    border:1px solid var(--laranja-muito-claro);
+    position:absolute;bottom:18px;left:18px;background:var(--branco);border-radius:999px;
+    box-shadow:var(--shadow-soft);padding:10px 20px 10px 12px;display:flex;align-items:center;gap:9px;
+    border:1px solid var(--fundo-destaque);
   }
-  .hero-badge svg{width:34px;height:34px;color:var(--laranja);flex-shrink:0;}
-  .hero-badge strong{display:block;font-size:14px;}
-  .hero-badge span{font-size:12.5px;color:#665343;}
+  .hero-badge svg{width:22px;height:22px;color:var(--primaria);flex-shrink:0;}
+  .hero-badge strong{font-size:13.5px;font-weight:600;white-space:nowrap;color:var(--texto);}
   .hero-photo-wrap{position:relative;}
 
-  /* ---------- DEPOIMENTOS ---------- */
+  /* ---------- DEPOIMENTOS (CARROSSEL) ---------- */
   .pill{
-    display:inline-block;background:var(--laranja);color:var(--branco);font-size:13px;font-weight:600;
+    display:inline-block;background:var(--primaria);color:var(--branco);font-size:13px;font-weight:600;
     letter-spacing:.06em;padding:9px 22px;border-radius:999px;margin-bottom:18px;
   }
-  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
-  .testi-card{
-    background:var(--laranja-muito-claro);border-radius:var(--radius-md);padding:32px 28px;position:relative;
+  .testi-carousel{display:flex;align-items:center;gap:16px;}
+  .testi-track{
+    display:flex;gap:26px;flex:1;overflow-x:auto;scroll-snap-type:x mandatory;
+    scroll-behavior:smooth;padding:4px 4px 8px;scrollbar-width:none;-ms-overflow-style:none;
   }
-  .testi-card svg.quote{width:30px;height:30px;color:var(--laranja);opacity:.8;margin-bottom:16px;}
-  .testi-card p.quote-text{font-size:15px;color:#4A3B2F;font-style:italic;margin-bottom:22px;min-height:80px;}
+  .testi-track::-webkit-scrollbar{display:none;}
+  @media (prefers-reduced-motion: reduce){
+    .testi-track{scroll-behavior:auto;}
+  }
+  .testi-track:focus-visible{outline:3px solid var(--secundaria-clara);outline-offset:4px;border-radius:var(--radius-md);}
+  .testi-card{
+    scroll-snap-align:start;flex:0 0 100%;
+    background:var(--fundo-destaque);border-radius:var(--radius-md);padding:32px 28px;
+  }
+  @media (min-width:640px){
+    .testi-card{flex:0 0 calc(50% - 13px);}
+  }
+  @media (min-width:1000px){
+    .testi-card{flex:0 0 calc(33.333% - 18px);}
+  }
+  .testi-stars{display:flex;gap:3px;margin-bottom:14px;}
+  .testi-stars svg{width:16px;height:16px;color:var(--primaria);}
+  .testi-card svg.quote{width:26px;height:26px;color:var(--primaria);opacity:.6;margin-bottom:12px;}
+  .testi-card p.quote-text{font-size:15px;color:#6B5F57;font-style:italic;margin-bottom:22px;min-height:80px;}
   .testi-person{display:flex;align-items:center;gap:12px;}
   .testi-avatar{
-    width:44px;height:44px;border-radius:50%;background:var(--laranja);color:var(--branco);
+    width:44px;height:44px;border-radius:50%;background:var(--primaria);color:var(--branco);
     display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;flex-shrink:0;
   }
   .testi-person strong{display:block;font-size:14.5px;}
-  .testi-person span{font-size:12.5px;color:#665343;}
+  .testi-person span{font-size:12.5px;color:#94877F;}
+
+  .testi-arrow{
+    flex-shrink:0;width:46px;height:46px;border-radius:50%;background:var(--branco);
+    border:1px solid var(--fundo-destaque);box-shadow:var(--shadow-soft);
+    display:flex;align-items:center;justify-content:center;
+    transition:background .18s ease, transform .18s ease, opacity .18s ease;
+  }
+  .testi-arrow svg{width:20px;height:20px;color:var(--primaria-hover);}
+  .testi-arrow:hover:not(:disabled){background:var(--primaria);transform:translateY(-2px);}
+  .testi-arrow:hover:not(:disabled) svg{color:var(--branco);}
+  .testi-arrow:disabled{opacity:.3;cursor:default;}
+  .testi-dots{display:flex;justify-content:center;gap:8px;margin-top:24px;}
+  .testi-dot{width:9px;height:9px;border-radius:50%;background:var(--secundaria-clara);padding:0;transition:background .18s ease, transform .18s ease;}
+  .testi-dot.active{background:var(--primaria);transform:scale(1.25);}
+  @media (max-width:640px){
+    .testi-arrow{display:none;}
+  }
 
   /* ---------- CONTATO ---------- */
   .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:stretch;}
   .contact-card{
-    background:var(--laranja);color:var(--branco);border-radius:var(--radius-lg);
+    background:var(--primaria);color:var(--branco);border-radius:var(--radius-lg);
     padding:44px 38px;position:relative;overflow:hidden;
   }
   .contact-card h3{color:var(--branco);font-size:24px;margin-bottom:22px;}
@@ -162,38 +202,46 @@
     position:absolute;bottom:-18px;right:-18px;width:120px;height:120px;border-radius:50%;
     background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;
   }
-  .contact-cat svg{width:56px;height:56px;color:rgba(255,255,255,.65);}
-  .map-placeholder{
-    border-radius:var(--radius-lg);border:1px solid var(--laranja-muito-claro);
-    background:var(--laranja-suave);
-    min-height:340px;display:flex;align-items:center;justify-content:center;position:relative;
-  }
-  .map-pin{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--texto);text-align:center;}
-  .map-pin svg{width:46px;height:46px;color:var(--laranja);}
-  .map-pin span{font-size:13.5px;font-weight:500;max-width:240px;color:#665343;}
+  .contact-cat svg{width:56px;height:56px;color:rgba(255,255,255,.7);}
 
-  /* ---------- FOOTER ---------- */
-  footer{background:var(--laranja-suave);color:#665343;padding:64px 0 28px;border-top:1px solid var(--laranja-muito-claro);}
+  /* Mapa */
+  .map-embed{
+    border-radius:var(--radius-lg);border:1px solid var(--fundo-destaque);
+    background:var(--creme);min-height:340px;height:100%;position:relative;overflow:hidden;
+  }
+  .map-embed iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
+  .map-cta{
+    position:absolute;left:50%;bottom:16px;transform:translateX(-50%);
+    background:var(--branco);color:var(--primaria-hover);font-size:13.5px;font-weight:600;
+    padding:11px 22px;border-radius:999px;box-shadow:var(--shadow-soft);
+    display:flex;align-items:center;gap:8px;transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .map-cta svg{width:16px;height:16px;color:var(--primaria);flex-shrink:0;}
+  .map-cta:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 12px 26px rgba(84, 73, 67, .12);}
+
+  /* ---------- FOOTER (Tons Claros) ---------- */
+  footer{background:var(--fundo-destaque);color:var(--texto);padding:64px 0 28px;}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
   .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
-  .footer-logo .brand-name{font-family:var(--font-display);font-size:28px;color:var(--laranja);}
+  .footer-logo .brand-name{font-family:var(--font-display);font-size:28px;color:var(--primaria);}
   .footer-logo img{width:36px;height:36px;object-fit:contain;}
-  .footer-tagline{font-size:14px;color:#665343;max-width:260px;}
-  footer h4{color:var(--texto);font-size:14.5px;margin-bottom:18px;font-weight:600;}
+  .footer-tagline{font-size:14px;color:#82756E;max-width:260px;}
+  footer h4{color:var(--primaria-hover);font-size:14.5px;margin-bottom:18px;font-weight:600;}
   footer ul li{margin-bottom:11px;}
-  footer ul a{font-size:14px;color:#665343;transition:color .18s ease;}
-  footer ul a:hover{color:var(--laranja);}
+  footer ul a{font-size:14px;color:#82756E;transition:color .18s ease;}
+  footer ul a:hover{color:var(--primaria);}
   .social-row{display:flex;gap:12px;margin-top:18px;}
   .social-row a{
-    width:38px;height:38px;border-radius:50%;border:1px solid var(--laranja-claro);
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--secundaria-clara);
     display:flex;align-items:center;justify-content:center;transition:background .18s ease, border-color .18s ease;
+    background:var(--branco);
   }
-  .social-row a svg{width:17px;height:17px;color:var(--laranja);}
-  .social-row a:hover{background:var(--laranja);border-color:var(--laranja);}
+  .social-row a svg{width:17px;height:17px;color:var(--primaria-hover);}
+  .social-row a:hover{background:var(--primaria);border-color:var(--primaria);}
   .social-row a:hover svg{color:var(--branco);}
   .footer-bottom{
-    border-top:1px solid var(--laranja-muito-claro);padding-top:24px;display:flex;justify-content:space-between;
-    flex-wrap:wrap;gap:10px;font-size:13px;color:#857161;
+    border-top:1px solid var(--secundaria-clara);padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;font-size:13px;color:#94877F;
   }
 
   /* ---------- RESPONSIVO ---------- */
@@ -201,14 +249,13 @@
     .split-grid, .split-grid-reverse{grid-template-columns:1fr;}
     .hero-photo{height:340px;}
     .img-order-mobile{order:-1;}
-    .testi-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
   }
   @media (max-width:760px){
     section{padding:64px 0;}
     nav.main-nav{position:fixed;top:78px;left:0;right:0;background:var(--branco);
-      border-bottom:1px solid var(--laranja-muito-claro);padding:20px 24px;
+      border-bottom:1px solid var(--fundo-destaque);padding:20px 24px;
       transform:translateY(-140%);opacity:0;transition:transform .25s ease, opacity .25s ease;
     }
     nav.main-nav.open{transform:translateY(0);opacity:1;}
@@ -217,7 +264,6 @@
     .menu-toggle{display:flex;}
     .split-grid h1{font-size:32px;}
     .split-grid h2{font-size:28px;}
-    .testi-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;gap:32px;}
   }
 </style>
@@ -227,11 +273,11 @@
 <!-- ============ HEADER ============ -->
 <header>
   <div class="nav-wrap">
-    <a href="#inicio" class="logo" aria-label="Página inicial de Planeta é o Bicho">
-      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/vet_demo/logo_path_logo.webp" alt="Logo de Planeta é o Bicho" class="logo-mark">
+    <a href="#inicio" class="logo" aria-label="Página inicial de Planeta É o bicho">
+      <img src="logo.webp" alt="Logo de Planeta É o bicho" class="logo-mark">
       <span class="logo-text">
         <span class="eyebrow-logo">Especialistas em você</span>
-        <span class="brand-name">Planeta é o Bicho</span>
+        <span class="brand-name">Planeta É o bicho</span>
       </span>
     </a>
 
@@ -268,7 +314,7 @@
     <div>
       <span class="eyebrow">Qualidade e Confiança</span>
       <h1>Seu pet merece o melhor!</h1>
-      <p class="hero-sub">Tudo o que seu Pet precisa, em um só lugar.</p>
+      <p class="hero-sub">Tudo o que seu Pet precisa, em um só lugar. Venha nos conhecer!</p>
 
       <ul class="checklist">
         <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Atendimento acolhedor e sem pressa</li>
@@ -286,10 +332,10 @@
     </div>
 
     <div class="hero-photo-wrap img-order-mobile">
-      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/vet_demo/hero_img_path_hero.webp" alt="Foto Principal de Planeta é o Bicho" class="hero-photo">
+      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/vet_demo/hero_img_path_hero.webp" alt="Foto Principal de Planeta É o bicho" class="hero-photo">
       <div class="hero-badge">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 44c-5 0-9-4-9-9 0-4 2-7 5-8-1-3-1-6 1-8 2-2 5-2 7 0 2-2 5-2 7 0 2 2 2 5 1 8 3 1 5 4 5 8 0 5-4 9-9 9" stroke="currentColor" stroke-width="3" transform="translate(-8,-10) scale(0.7)"/></svg>
-        <span><strong>Cuidado de verdade</strong><span>Para cada cliente que passa pela nossa porta</span></span>
+        <strong>Cuidado de verdade</strong>
       </div>
     </div>
   </div>
@@ -311,14 +357,14 @@
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Procedimentos Seguros</strong>
-            <span style="font-size: 14px; color: #665343;">Trabalhos conduzidos com técnica e foco total no cliente.</span>
+            <span style="font-size: 14px; color: #82756E;">Trabalhos conduzidos com técnica e foco total no cliente.</span>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Acompanhamento Próximo</strong>
-            <span style="font-size: 14px; color: #665343;">Do diagnóstico inicial ao cuidado pós-atendimento.</span>
+            <span style="font-size: 14px; color: #82756E;">Do diagnóstico inicial ao cuidado pós-atendimento.</span>
           </div>
         </li>
       </ul>
@@ -339,14 +385,14 @@
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Recepção Acolhedora</strong>
-            <span style="font-size: 14px; color: #665343;">Um primeiro contato calmo e super agradável.</span>
+            <span style="font-size: 14px; color: #82756E;">Um primeiro contato calmo e super agradável.</span>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Atendimento Pontual</strong>
-            <span style="font-size: 14px; color: #665343;">Respeitamos o seu tempo e o horário agendado.</span>
+            <span style="font-size: 14px; color: #82756E;">Respeitamos o seu tempo e o horário agendado.</span>
           </div>
         </li>
       </ul>
@@ -357,40 +403,76 @@
   </div>
 </section>
 
-<!-- ============ DEPOIMENTOS ============ -->
+<!-- ============ DEPOIMENTOS (CARROSSEL) ============ -->
 <section id="depoimentos">
   <div class="container">
     <div class="section-head center">
       <span class="pill">Depoimentos</span>
-      <h2>Quem Confia na Planeta é o Bicho</h2>
+      <h2>Quem Confia na Planeta É o bicho</h2>
     </div>
 
-    <div class="testi-grid">
-      <div class="testi-card">
-        <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
-        <p class="quote-text">"O atendimento é impecável! Fui muito bem recebido desde o primeiro momento. O ambiente é super agradável e os profissionais são muito competentes."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">C</div>
-          <div><strong>Carlos Eduardo</strong><span>Cliente Satisfeito</span></div>
+    <div class="testi-carousel">
+      <button class="testi-arrow" id="testiPrev" type="button" aria-label="Ver depoimento anterior">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+
+      <div class="testi-track" id="testiTrack" tabindex="0" role="region" aria-label="Carrossel de depoimentos de clientes — arraste para o lado para ver mais">
+        <div class="testi-card" role="group" aria-label="Depoimento 1 de 3">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+          </div>
+          <span class="visually-hidden">Avaliação 5 de 5 estrelas.</span>
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p class="quote-text">"O atendimento é impecável! Fui muito bem recebido desde o primeiro momento. O ambiente é super agradável e os profissionais são muito competentes."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">C</div>
+            <div><strong>Carlos Eduardo</strong><span>Cliente Satisfeito</span></div>
+          </div>
+        </div>
+        <div class="testi-card" role="group" aria-label="Depoimento 2 de 3">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+          </div>
+          <span class="visually-hidden">Avaliação 5 de 5 estrelas.</span>
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p class="quote-text">"Recomendo de olhos fechados. Preço justo, qualidade no serviço e uma estrutura de primeira. Ganharam uma cliente fiel."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">M</div>
+            <div><strong>Mariana Silva</strong><span>Cliente Satisfeita</span></div>
+          </div>
+        </div>
+        <div class="testi-card" role="group" aria-label="Depoimento 3 de 3">
+          <div class="testi-stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.9.7-5.2 4.7 1.5 6.8L12 17l-6.1 3.5 1.5-6.8L2.2 9l6.9-.7L12 2Z"/></svg>
+          </div>
+          <span class="visually-hidden">Avaliação 5 de 5 estrelas.</span>
+          <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
+          <p class="quote-text">"Foi a melhor experiência que já tive. Tudo é muito limpo, organizado e eles demonstram um cuidado real com a gente."</p>
+          <div class="testi-person">
+            <div class="testi-avatar">F</div>
+            <div><strong>Fernanda Costa</strong><span>Cliente Satisfeita</span></div>
+          </div>
         </div>
       </div>
-      <div class="testi-card">
-        <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
-        <p class="quote-text">"Recomendo de olhos fechados. Preço justo, qualidade no serviço e uma estrutura de primeira. Ganharam uma cliente fiel."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">M</div>
-          <div><strong>Mariana Silva</strong><span>Cliente Satisfeita</span></div>
-        </div>
-      </div>
-      <div class="testi-card">
-        <svg class="quote" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 8c-2.2 0-4 1.8-4 4v4h4v-4H5c0-1.1.9-2 2-2V8Zm10 0c-2.2 0-4 1.8-4 4v4h4v-4h-2c0-1.1.9-2 2-2V8Z"/></svg>
-        <p class="quote-text">"Foi a melhor experiência que já tive. Tudo é muito limpo, organizado e eles demonstram um cuidado real com a gente."</p>
-        <div class="testi-person">
-          <div class="testi-avatar">F</div>
-          <div><strong>Fernanda Costa</strong><span>Cliente Satisfeita</span></div>
-        </div>
-      </div>
+
+      <button class="testi-arrow" id="testiNext" type="button" aria-label="Ver próximo depoimento">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
     </div>
+
+    <div class="testi-dots" id="testiDots" role="tablist" aria-label="Selecionar depoimento"></div>
   </div>
 </section>
 
@@ -404,7 +486,7 @@
 
     <div class="contact-grid">
       <div class="contact-card">
-        <h3>Fale com a Planeta é o Bicho</h3>
+        <h3>Fale com a Planeta É o bicho</h3>
 
         <div class="contact-row">
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.5"/></svg>
@@ -421,7 +503,7 @@
 
         <div class="contact-ctas">
           <a href="https://wa.me/5565999536185" class="btn btn-light">Falar Agora</a>
-          <a href="https://maps.app.goo.gl/DwshBLZuk57NUCSw5" class="btn" style="border:1.5px solid rgba(255,255,255,.6);color:#fff;">Como Chegar</a>
+          <a href="https://maps.app.goo.gl/KpGQfrWqc5GRf1qT9" class="btn" style="border:1.5px solid rgba(255,255,255,.6);color:#fff;">Como Chegar</a>
         </div>
 
         <div class="contact-cat" aria-hidden="true">
@@ -429,12 +511,18 @@
         </div>
       </div>
 
-      <div class="map-placeholder" role="img" aria-label="Mapa com a localização">
-        <div class="map-pin">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
-          <strong style="font-size:14.5px;">Venha nos visitar!</strong>
-          <a href="https://maps.app.goo.gl/DwshBLZuk57NUCSw5" style="text-decoration:underline;">Ver rota no Google Maps</a>
-        </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps?q=Av. André Antônio Maggi, 1649, Sapezal, CEP 78365000&output=embed"
+          title="Localização de Planeta É o bicho no Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen>
+        </iframe>
+        <a href="https://maps.app.goo.gl/KpGQfrWqc5GRf1qT9" class="map-cta">
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+          Ver rota completa
+        </a>
       </div>
     </div>
   </div>
@@ -446,8 +534,8 @@
     <div class="footer-grid">
       <div>
         <div class="footer-logo">
-          <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/vet_demo/logo_path_logo.webp" alt="Logo" class="logo-mark" style="width:36px; height:36px; object-fit:contain;">
-          <span class="brand-name">Planeta é o Bicho</span>
+          <img src="logo.webp" alt="Logo" class="logo-mark" style="width:36px; height:36px; object-fit:contain;">
+          <span class="brand-name">Planeta É o bicho</span>
         </div>
         <p class="footer-tagline">Qualidade e profissionalismo em cada atendimento.</p>
         <div class="social-row">
@@ -473,7 +561,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Planeta é o Bicho. Todos os direitos reservados.</span>
+      <span>© 2026 Planeta É o bicho. Todos os direitos reservados.</span>
       <span>Desenvolvido para entregar o melhor para você.</span>
     </div>
   </div>
@@ -493,6 +581,65 @@
       menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  // Carrossel de depoimentos
+  (function () {
+    const track = document.getElementById('testiTrack');
+    const prevBtn = document.getElementById('testiPrev');
+    const nextBtn = document.getElementById('testiNext');
+    const dotsWrap = document.getElementById('testiDots');
+    if (!track || !dotsWrap) return;
+
+    const cards = Array.from(track.children);
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    cards.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'testi-dot';
+      dot.setAttribute('role', 'tab');
+      dot.setAttribute('aria-label', `Ir para depoimento ${i + 1}`);
+      dot.addEventListener('click', () => scrollToCard(i));
+      dotsWrap.appendChild(dot);
+    });
+    const dots = Array.from(dotsWrap.children);
+
+    function scrollToCard(i) {
+      const card = cards[i];
+      track.scrollTo({
+        left: card.offsetLeft - track.offsetLeft,
+        behavior: reduceMotion ? 'auto' : 'smooth'
+      });
+    }
+
+    function activeIndex() {
+      const trackLeft = track.scrollLeft;
+      let closest = 0, minDist = Infinity;
+      cards.forEach((card, i) => {
+        const dist = Math.abs(card.offsetLeft - track.offsetLeft - trackLeft);
+        if (dist < minDist) { minDist = dist; closest = i; }
+      });
+      return closest;
+    }
+
+    function updateUI() {
+      const current = activeIndex();
+      dots.forEach((d, i) => d.classList.toggle('active', i === current));
+      if (prevBtn) prevBtn.disabled = current === 0;
+      if (nextBtn) nextBtn.disabled = current === cards.length - 1;
+    }
+
+    let scrollTimeout;
+    track.addEventListener('scroll', () => {
+      clearTimeout(scrollTimeout);
+      scrollTimeout = setTimeout(updateUI, 80);
+    });
+
+    if (prevBtn) prevBtn.addEventListener('click', () => scrollToCard(Math.max(0, activeIndex() - 1)));
+    if (nextBtn) nextBtn.addEventListener('click', () => scrollToCard(Math.min(cards.length - 1, activeIndex() + 1)));
+
+    updateUI();
+  })();
 </script>
 
 </body>
