@@ -21,5 +21,13 @@
     "WhatsApp": "556536241252",
     "Demo": "https://demos-landingpages.vercel.app/demos/solar_demo",
     "Status": "Processado"
+  },
+  {
+    "id": 3,
+    "Empresa": "OC SOLAR",
+    "Nicho": "Energia Solar / Climatização",
+    "WhatsApp": "5565999479475",
+    "Demo": "https://demos-landingpages.vercel.app/demos/solar_demo",
+    "Status": "Pendente"
   }
 ]
