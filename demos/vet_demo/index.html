@@ -11,19 +11,19 @@
 <style>
   :root{
     /* Cores atualizadas baseadas na logo.webp */
-    --turquesa: #85B539; /* Verde principal (ex: número 1) */
+    --turquesa: #85B539; /* Verde principal */
     --turquesa-2: #9BCC4D; /* Verde mais claro para foco/hover */
     --azul-claro: #D1DFB5; /* Tom intermediário suave */
     --azul-muito-claro: #EFECE3; /* Baseado no fundo bege da patinha */
     --branco: #FFFFFF; 
-    --texto: #4E342E; /* Marrom escuro dos textos "Pet" e "anos" */
+    --texto: #4E342E; /* Marrom escuro dos textos */
     --turquesa-escuro: #5B7A23; /* Verde escuro para contraste e bordas */
     --creme: #FCFBF8; /* Fundo creme claro da logo */
     
     --radius-sm:10px;
     --radius-md:18px;
     --radius-lg:32px;
-    --shadow-soft:0 10px 30px rgba(78, 52, 46, .07); /* Sombra ajustada para o tom marrom */
+    --shadow-soft:0 10px 30px rgba(78, 52, 46, .07);
     --font-display:'Sacramento', cursive;
     --font-sans:'Poppins', sans-serif;
     --container:1180px;
@@ -59,7 +59,7 @@
   }
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .section-head p{color:#6D554D;font-size:16.5px;margin-top:14px;} /* Ajustado para harmonizar com o marrom */
+  .section-head p{color:#6D554D;font-size:16.5px;margin-top:14px;}
 
   /* Botões */
   .btn{
@@ -165,14 +165,26 @@
     background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
   }
   .contact-cat svg{width:56px;height:56px;color:rgba(255,255,255,.55);}
-  .map-placeholder{
-    border-radius:var(--radius-lg);border:1px solid var(--azul-muito-claro);
-    background:var(--creme);
-    min-height:340px;display:flex;align-items:center;justify-content:center;position:relative;
+  
+  /* ---------- MAPA INTERATIVO ---------- */
+  .map-wrapper {
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--azul-muito-claro);
+    background: var(--creme);
+    min-height: 340px;
+    position: relative;
+    overflow: hidden; /* Garante que as bordas do mapa fiquem arredondadas */
+    box-shadow: var(--shadow-soft);
   }
-  .map-pin{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--turquesa-escuro);text-align:center;}
-  .map-pin svg{width:46px;height:46px;color:var(--turquesa);}
-  .map-pin span{font-size:13.5px;font-weight:500;max-width:240px;color:#6D554D;}
+  
+  .map-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
   /* ---------- FOOTER ---------- */
   footer{background:var(--texto);color:#EFECE3;padding:64px 0 28px;}
@@ -430,12 +442,16 @@
         </div>
       </div>
 
-      <div class="map-placeholder" role="img" aria-label="Mapa com a localização">
-        <div class="map-pin">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
-          <strong style="font-size:14.5px;">Venha nos visitar!</strong>
-          <a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3878.734296934655!2d-58.82789638656804!3d-13.551884293649191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93bce1b7903b05cb%3A0x12ef95be71ab187a!2sTrevipet%20(Animal%20Planet)!5e0!3m2!1spt-BR!2sbr!4v1789436137947!5m2!1spt-BR!2sbr" style="text-decoration:underline;">Ver rota no Google Maps</a>
-        </div>
+      <div class="map-wrapper" aria-label="Mapa com a localização">
+        <iframe 
+          src="https://www.google.com/maps?q=R.+das+Orquídeas,+1268,+Sapezal+-+MT,+78365-000&output=embed" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
     </div>
   </div>
