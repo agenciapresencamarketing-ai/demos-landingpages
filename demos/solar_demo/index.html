@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>São Miguel Solar</title>
-<meta name="description" content="São Miguel Solar — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
+<title>OC Solar</title>
+<meta name="description" content="OC Solar — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
 <link rel="icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy: #2E6B48;
-    --navy-deep: #1F4A30;
-    --amber: #92D69C;
-    --amber-deep: #6FB57F;
-    --forest: #4A8C68;
-    --bg: #FBFDF9;
-    --bg-soft: #EAF6EC;
-    --bg-mint: #DCEFDF;
-    --bg-mint-deep: #C9E4CE;
-    --ink: #263B2E;
-    --ink-soft: #5C6F62;
-    --line: #D2E6D6;
+    --navy: #004F9F; /* Azul escuro da logo */
+    --navy-deep: #00366D; /* Azul mais escuro para hover */
+    --amber: #F7941D; /* Laranja da logo */
+    --amber-deep: #D97A12; /* Laranja mais escuro para hover */
+    --forest: #39A9DB; /* Azul claro dos painéis na logo */
+    --bg: #F9FAFB;
+    --bg-soft: #F0F4F8;
+    --bg-mint: #E1EAF4;
+    --bg-mint-deep: #C9D9ED;
+    --ink: #19273A;
+    --ink-soft: #566880;
+    --line: #D0DBE8;
     --radius: 14px;
     --maxw: 1160px;
-    --shadow: 0 18px 40px -20px rgba(46,107,72,0.22);
+    --shadow: 0 18px 40px -20px rgba(0, 79, 159, 0.22);
   }
 
   *{ box-sizing: border-box; }
@@ -73,16 +73,15 @@
   .btn:focus-visible{ outline: 3px solid var(--amber); outline-offset: 3px; }
   .btn-primary{
     background: var(--amber);
-    color: var(--navy-deep);
+    color: #ffffff; /* Texto branco para dar contraste no laranja */
   }
   .btn-primary:hover{ background: var(--amber-deep); transform: translateY(-2px); box-shadow: var(--shadow); }
-  .btn-short{ display:none; }
   .btn-ghost{
     background: transparent;
     border-color: var(--navy);
     color: var(--navy);
   }
-  .btn-ghost:hover{ border-color: var(--navy-deep); background: rgba(46,107,72,0.06); }
+  .btn-ghost:hover{ border-color: var(--navy-deep); background: rgba(0, 79, 159, 0.06); }
   .btn-outline{
     background: transparent;
     border-color: var(--navy);
@@ -95,7 +94,7 @@
     position: sticky;
     top:0;
     z-index: 50;
-    background: rgba(220,239,223,0.92);
+    background: rgba(240, 244, 248, 0.92);
     backdrop-filter: blur(6px);
     box-shadow: 0 1px 0 var(--line);
   }
@@ -159,7 +158,7 @@
   .mobile-nav a{
     color: var(--ink);
     padding: 12px 0;
-    border-bottom: 1px solid rgba(38,59,46,0.12);
+    border-bottom: 1px solid rgba(25, 39, 58, 0.12);
     font-weight:600;
     font-size: 0.95rem;
   }
@@ -233,7 +232,7 @@
     font-size: 0.8rem;
     font-weight:700;
     color: var(--forest);
-    background: rgba(47,122,78,0.1);
+    background: rgba(57, 169, 219, 0.1);
     padding: 6px 14px;
     border-radius: 999px;
     margin-bottom: 14px;
@@ -506,7 +505,7 @@
   footer a:hover{ color: var(--navy-deep); }
   .footer-list li{ margin-bottom: 10px; }
   .footer-bottom{
-    border-top: 1px solid rgba(38,59,46,0.15);
+    border-top: 1px solid rgba(25, 39, 58, 0.15);
     padding-top: 20px;
     font-size: 0.82rem;
     display:flex;
@@ -547,19 +546,6 @@
     section{ padding: 96px 0; }
     .hero{ padding: 88px 0 110px; }
   }
-
-  /* Header compacto no mobile: libera espaço para o nome da empresa */
-  @media (max-width: 480px){
-    .header-inner{ padding: 12px 16px; gap: 8px; }
-    .brand span{ font-size: 0.92rem; }
-    .btn-full{ display:none; }
-    .btn-short{ display:inline; }
-    .header-actions .btn-primary{
-      padding: 10px 16px;
-      font-size: 0.85rem;
-      white-space: nowrap;
-    }
-  }
 </style>
 </head>
 <body>
@@ -567,8 +553,8 @@
 <header class="site">
   <div class="header-inner">
     <a class="brand" href="#inicio">
-      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="São Miguel Solar">
-      <span>São Miguel Solar</span>
+      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="OC Solar">
+      <span>OC Solar</span>
     </a>
     <nav class="main-nav">
       <a href="#solucao">Soluções</a>
@@ -578,10 +564,7 @@
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" href="https://wa.me/556536241252" target="_blank" rel="noopener">
-        <span class="btn-full">Falar no WhatsApp</span>
-        <span class="btn-short">WhatsApp</span>
-      </a>
+      <a class="btn btn-primary" href="https://wa.me/5565999479475" target="_blank" rel="noopener">Falar no WhatsApp</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span>
       </button>
@@ -599,16 +582,16 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div>
-      <h1>O calor chegou com tudo!</h1>
-      <p class="lede">Mas você não precisa deixar de usar o ar-condicionado por medo da conta de luz. Com energia solar, você ganha mais liberdade para aproveitar o conforto da sua casa.</p>
+      <h1>Seu projeto de energia solar merece quem entende do assunto!</h1>
+      <p class="lede">Invista em uma solução inteligente, econômica e sustentável para reduzir seus custos com energia.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://wa.me/556536241252" target="_blank" rel="noopener">Pedir simulação gratuita</a>
+        <a class="btn btn-primary" href="https://wa.me/5565999479475" target="_blank" rel="noopener">Pedir simulação gratuita</a>
         <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
       </div>
       <p class="hero-note">Resposta no mesmo dia, sem compromisso.</p>
     </div>
     <div class="hero-media">
-      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/hero_img_path_hero.webp" alt="Sistema de energia solar instalado por São Miguel Solar">
+      <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/hero_img_path_hero.webp" alt="Sistema de energia solar instalado por OC Solar">
     </div>
   </div>
 </section>
@@ -647,13 +630,13 @@
   <div class="wrap">
     <div class="split reveal">
       <div class="media">
-        <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/servico_img_path_servicos.webp" alt="Instalação de painéis solares">
+        <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/servico_img_path_servico.webp" alt="Instalação de painéis solares">
       </div>
       <div>
         <span class="tag">Energia solar fotovoltaica</span>
         <h2>Gere a própria energia e veja a diferença na conta</h2>
-        <p class="lede">Projetamos e instalamos um sistema dimensionado para o seu consumo real. A energia gerada vira crédito junto à concessionária e reduz sua conta em até 80, com 5 anos de garantia em todo o sistema.</p>
-        <a class="btn btn-outline" href="https://wa.me/556536241252" target="_blank" rel="noopener">Simular minha economia</a>
+        <p class="lede">Projetamos e instalamos um sistema dimensionado para o seu consumo real. A energia gerada vira crédito junto à concessionária e reduz sua conta em até 85, com 5 anos de garantia em todo o sistema.</p>
+        <a class="btn btn-outline" href="https://wa.me/5565999479475" target="_blank" rel="noopener">Simular minha economia</a>
       </div>
     </div>
   </div>
@@ -665,7 +648,7 @@
       <h2>Quanto você pagaria com energia solar?</h2>
       <p class="lede">Escolha o valor mais próximo da sua conta atual de energia e veja uma estimativa da sua nova conta.</p>
     </div>
-    <div class="simulator reveal" data-economia="80">
+    <div class="simulator reveal" data-economia="85>
       <div class="sim-options" role="group" aria-label="Selecione o valor da sua conta de energia">
         <button type="button" class="sim-chip" data-value="150">R$ 150</button>
         <button type="button" class="sim-chip" data-value="300">R$ 300</button>
@@ -693,7 +676,7 @@
           </div>
         </div>
         <p class="sim-savings" id="simSavings"></p>
-        <a class="btn btn-primary" id="simCta" href="https://wa.me/556536241252" target="_blank" rel="noopener">Quero essa economia</a>
+        <a class="btn btn-primary" id="simCta" href="https://wa.me/5565999479475" target="_blank" rel="noopener">Quero essa economia</a>
       </div>
     </div>
   </div>
@@ -729,17 +712,17 @@
   <div class="wrap">
     <div class="split reverse reveal">
       <div class="media">
-        <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/local_img_path_local.webp" alt="Sede e estrutura de São Miguel Solar">
+        <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/local_img_path_local.webp" alt="Sede e estrutura de OC Solar">
       </div>
       <div>
         <span class="tag">Nossa estrutura</span>
         <h2>Uma equipe própria, perto de você</h2>
-        <p class="lede">Trabalhamos a partir de uma estrutura própria em  R. Rui Barbosa, 1095 - Jardim Independência, Cuiabá - MT, 78032-120, onde ficam o estoque de equipamentos e o time técnico responsável pelas instalações.</p>
-        <a class="btn btn-outline" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.7879234015763!2d-56.1099755!3d-15.602975799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x819eba20eedfc665%3A0xe72f800d0a8601fb!2sS%C3%A3o%20Miguel%20Solar!5e0!3m2!1spt-BR!2sbr!4v1789409925096!5m2!1spt-BR!2sbr" target="_blank" rel="noopener">Ver no mapa</a>
+        <p class="lede">Trabalhamos a partir de uma estrutura própria em Rua Andorinha N 145 Bairro Jardim Olenka, Campo Novo do Parecis 78360-000, onde ficam o estoque de equipamentos e o time técnico responsável pelas instalações.</p>
+        <a class="btn btn-outline" href="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" target="_blank" rel="noopener">Ver no mapa</a>
       </div>
     </div>
     <div class="map-card reveal">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.7879234015763!2d-56.1099755!3d-15.602975799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x819eba20eedfc665%3A0xe72f800d0a8601fb!2sS%C3%A3o%20Miguel%20Solar!5e0!3m2!1spt-BR!2sbr!4v1789409925096!5m2!1spt-BR!2sbr" title="Localização de São Miguel Solar no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <iframe src="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" title="Localização de OC Solar no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -835,7 +818,7 @@
     <div class="reveal">
       <h2>Pronto para gerar a sua própria energia?</h2>
       <p class="lede">Fale agora com a nossa equipe e receba uma simulação gratuita para o seu telhado.</p>
-      <a class="btn btn-primary" href="https://wa.me/556536241252" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+      <a class="btn btn-primary" href="https://wa.me/5565999479475" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
     </div>
   </div>
 </section>
@@ -845,30 +828,30 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="São Miguel Solar">
-          <span>São Miguel Solar</span>
+          <img src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="OC Solar">
+          <span>OC Solar</span>
         </div>
         <p style="max-width:36ch; font-size:0.88rem;">Projeto, instalação e acompanhamento de sistemas de energia solar fotovoltaica.</p>
       </div>
       <div>
         <h4>Contato</h4>
         <ul class="footer-list">
-          <li><a href="tel:(65) 3624-1252">(65) 3624-1252</a></li>
-          <li><a href="https://wa.me/556536241252" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/saomiguelsolar" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="tel:65 99947-9475">65 99947-9475</a></li>
+          <li><a href="https://wa.me/5565999479475" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/ocsolar" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
       <div>
         <h4>Localização</h4>
         <ul class="footer-list">
-          <li> R. Rui Barbosa, 1095 - Jardim Independência, Cuiabá - MT, 78032-120</li>
-          <li><a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3842.7879234015763!2d-56.1099755!3d-15.602975799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x819eba20eedfc665%3A0xe72f800d0a8601fb!2sS%C3%A3o%20Miguel%20Solar!5e0!3m2!1spt-BR!2sbr!4v1789409925096!5m2!1spt-BR!2sbr" target="_blank" rel="noopener">Ver no mapa</a></li>
+          <li>Rua Andorinha N 145 Bairro Jardim Olenka, Campo Novo do Parecis 78360-000</li>
+          <li><a href="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" target="_blank" rel="noopener">Ver no mapa</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span id="copyYear">São Miguel Solar. Todos os direitos reservados.</span>
-      <span> R. Rui Barbosa, 1095 - Jardim Independência, Cuiabá - MT, 78032-120</span>
+      <span id="copyYear">OC Solar. Todos os direitos reservados.</span>
+      <span>Rua Andorinha N 145 Bairro Jardim Olenka, Campo Novo do Parecis 78360-000</span>
     </div>
   </div>
 </footer>
