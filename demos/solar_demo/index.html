@@ -5,7 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OC Solar</title>
 <meta name="description" content="OC Solar — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
-<link rel="icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
+<link rel="icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" sizes="any">
+<link rel="shortcut icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -194,8 +196,15 @@
     overflow:hidden;
     box-shadow: var(--shadow);
     border: 1px solid var(--line);
+    background: #fff;
   }
-  .hero-media img{ width:100%; height: 100%; object-fit: cover; aspect-ratio: 4/3; }
+  /* A imagem aparece inteira, sem corte, qualquer que seja a proporção do arquivo */
+  .hero-media img{
+    width:100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: contain;
+  }
 
   /* Stats */
   .stats{
@@ -436,6 +445,7 @@
     overflow: hidden;
     box-shadow: var(--shadow);
     border: 1px solid var(--line);
+    background: var(--bg-soft);
   }
   .map-card iframe{
     width: 100%;
@@ -648,7 +658,7 @@
       <h2>Quanto você pagaria com energia solar?</h2>
       <p class="lede">Escolha o valor mais próximo da sua conta atual de energia e veja uma estimativa da sua nova conta.</p>
     </div>
-    <div class="simulator reveal" data-economia="85>
+    <div class="simulator reveal" data-economia="85">
       <div class="sim-options" role="group" aria-label="Selecione o valor da sua conta de energia">
         <button type="button" class="sim-chip" data-value="150">R$ 150</button>
         <button type="button" class="sim-chip" data-value="300">R$ 300</button>
@@ -721,8 +731,8 @@
         <a class="btn btn-outline" href="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" target="_blank" rel="noopener">Ver no mapa</a>
       </div>
     </div>
-    <div class="map-card reveal">
-      <iframe src="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" title="Localização de OC Solar no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="map-card reveal" id="mapCard">
+      <iframe id="mapFrame" data-link="https://maps.app.goo.gl/ohRPtrJLt8uXQ8eq5" data-endereco="Rua Andorinha N 145 Bairro Jardim Olenka, Campo Novo do Parecis 78360-000" title="Localização de OC Solar no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -871,6 +881,36 @@
           toggle.setAttribute('aria-expanded', 'false');
         });
       });
+    }
+
+    // Ano no rodapé
+    var copyYear = document.getElementById('copyYear');
+    if (copyYear) {
+      copyYear.textContent = '© ' + new Date().getFullYear() + ' ' + copyYear.textContent;
+    }
+
+    // Mapa incorporado
+    var mapFrame = document.getElementById('mapFrame');
+    var mapCard = document.getElementById('mapCard');
+    if (mapFrame) {
+      var rawLink = (mapFrame.getAttribute('data-link') || '').trim();
+      var rawAddr = (mapFrame.getAttribute('data-endereco') || '').trim();
+      var isFilled = function(v){ return v && v.indexOf('{{') === -1; };
+      var embedSrc = '';
+
+      // 1) Se o link já for um link de incorporação, usa ele direto
+      if (isFilled(rawLink) && /(\/maps\/embed|output=embed)/.test(rawLink)) {
+        embedSrc = rawLink;
+      // 2) Senão, monta a incorporação a partir do endereço (funciona sem chave de API)
+      } else if (isFilled(rawAddr)) {
+        embedSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(rawAddr) + '&output=embed';
+      }
+
+      if (embedSrc) {
+        mapFrame.setAttribute('src', embedSrc);
+      } else if (mapCard) {
+        mapCard.style.display = 'none';
+      }
     }
 
     var revealEls = document.querySelectorAll('.reveal');
