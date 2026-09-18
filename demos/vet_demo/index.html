@@ -4,34 +4,27 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pet Clinique</title>
-<meta name="description" content="Pet Clinique | 💙🐾 Uma verdadeira experiência PET começa aqui! Na Pet Clinique, cada detalhe é pensado para que você e seu melhor amigo se sintam acolhidos, cuidados e cheios de amor. Atendimento humanizado, banho e tosa com terapias especiais e aquele toque de carinho que faz toda diferença!">
+<meta name="description" content="Pet Clinique | Uma verdadeira experiência PET começa aqui! Na Pet Clinique, cada detalhe é pensado para que você e seu melhor amigo se sintam acolhidos, cuidados e cheios de amor. Atendimento humanizado, banho e tosa com terapias especiais e aquele toque de carinho que faz toda diferença!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
 <style>
   :root{
-    /* Novas cores baseadas na logo (imagem 0) */
-    --fundo-turquesa: #55B4B2; /* Cor de fundo da logo */
-    --linha-escura: #545F5B;   /* Cor das linhas da coroa e do gato */
-    --branco-logo: #FFFFFF;    /* Cor do preenchimento do gato */
-    
-    /* Mapeamento das variáveis originais para a nova paleta */
-    --turquesa: var(--fundo-turquesa); /* Turquesa principal */
-    --turquesa-2: #66C7C5;           /* Um tom mais claro para hover/foco */
-    --azul-claro: #A3DEDD;           /* Um tom muito claro para fundos sutis */
-    --azul-muito-claro: #ECF8F8;     /* Fundo quase branco */
-    --branco: #FFFFFF;
-    --texto: var(--linha-escura);     /* Texto principal é a cor da linha */
-    --turquesa-escuro: #3D8583;      /* Um tom mais escuro para contrastes */
-    --creme: #F6FCFC;                /* Fundo creme sutil */
-    
-    --radius-sm: 10px;
-    --radius-md: 18px;
-    --radius-lg: 32px;
-    --shadow-soft: 0 10px 30px rgba(84,95,91,.07); /* Sombra baseada no texto */
-    --font-display: 'Sacramento', cursive;
-    --font-sans: 'Poppins', sans-serif;
-    --container: 1180px;
+    --turquesa:#2B9CAD;
+    --turquesa-2:#28ADC7;
+    --azul-claro:#90C8D0;
+    --azul-muito-claro:#D3E0E5;
+    --branco:#FFFFFF;
+    --texto:#182126;
+    --turquesa-escuro:#1F7885;
+    --creme:#FAFCFC;
+    --radius-sm:10px;
+    --radius-md:18px;
+    --radius-lg:32px;
+    --shadow-soft:0 10px 30px rgba(24,33,38,.07);
+    --font-display:'Sacramento', cursive;
+    --font-sans:'Poppins', sans-serif;
+    --container:1180px;
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
@@ -64,7 +57,7 @@
   }
   .section-head{max-width:640px;margin-bottom:56px;}
   .section-head.center{margin-left:auto;margin-right:auto;text-align:center;}
-  .section-head p{color:var(--linha-escura); opacity: 0.8; font-size:16.5px;margin-top:14px;}
+  .section-head p{color:#4B5A61;font-size:16.5px;margin-top:14px;}
 
   /* Botões */
   .btn{
@@ -73,7 +66,7 @@
     transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
     white-space:nowrap;
   }
-  .btn-primary{background:var(--turquesa);color:var(--branco);box-shadow:0 8px 20px rgba(85,180,178,.28);}
+  .btn-primary{background:var(--turquesa);color:var(--branco);box-shadow:0 8px 20px rgba(43,156,173,.28);}
   .btn-primary:hover{background:var(--turquesa-escuro);transform:translateY(-2px);}
   .btn-outline{background:transparent;color:var(--turquesa-escuro);border:1.5px solid var(--turquesa);}
   .btn-outline:hover{background:var(--turquesa);color:var(--branco);transform:translateY(-2px);}
@@ -103,7 +96,7 @@
   }
   nav.main-nav a:hover::after{width:100%;}
   .nav-actions{display:flex;align-items:center;gap:18px;}
-  .nav-phone{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:var(--linha-escura); opacity: 0.8;}
+  .nav-phone{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:500;color:#4B5A61;}
   .nav-phone svg{width:18px;height:18px;color:var(--turquesa);}
   .menu-toggle{display:none;width:40px;height:40px;align-items:center;justify-content:center;}
   .menu-toggle svg{width:26px;height:26px;color:var(--texto);}
@@ -116,7 +109,7 @@
   
   .split-grid h1, .split-grid-reverse h2{font-size:44px;letter-spacing:-.01em;margin-bottom:20px;}
   .split-grid h2{font-size:36px;letter-spacing:-.01em;margin-bottom:20px;}
-  .hero-sub{font-size:17px;color:var(--linha-escura); opacity: 0.8; max-width:520px;margin-bottom:32px;}
+  .hero-sub{font-size:17px;color:#4B5A61;max-width:520px;margin-bottom:32px;}
   
   .checklist{display:grid;gap:14px;margin-bottom:36px;}
   .checklist li{display:flex;align-items:flex-start;gap:12px;font-size:15px;color:var(--texto);}
@@ -130,7 +123,7 @@
   }
   .hero-badge svg{width:34px;height:34px;color:var(--turquesa);flex-shrink:0;}
   .hero-badge strong{display:block;font-size:14px;}
-  .hero-badge span{font-size:12.5px;color:var(--linha-escura); opacity: 0.8;}
+  .hero-badge span{font-size:12.5px;color:#4B5A61;}
   .hero-photo-wrap{position:relative;}
 
   /* ---------- DEPOIMENTOS ---------- */
@@ -143,14 +136,14 @@
     background:var(--azul-muito-claro);border-radius:var(--radius-md);padding:32px 28px;position:relative;
   }
   .testi-card svg.quote{width:30px;height:30px;color:var(--turquesa);opacity:.6;margin-bottom:16px;}
-  .testi-card p.quote-text{font-size:15px;color:var(--linha-escura); opacity: 0.9; font-style:italic;margin-bottom:22px;min-height:80px;}
+  .testi-card p.quote-text{font-size:15px;color:#374146;font-style:italic;margin-bottom:22px;min-height:80px;}
   .testi-person{display:flex;align-items:center;gap:12px;}
   .testi-avatar{
     width:44px;height:44px;border-radius:50%;background:var(--turquesa);color:var(--branco);
     display:flex;align-items:center;justify-content:center;font-weight:600;font-size:15px;flex-shrink:0;
   }
   .testi-person strong{display:block;font-size:14.5px;}
-  .testi-person span{font-size:12.5px;color:var(--linha-escura); opacity: 0.7;}
+  .testi-person span{font-size:12.5px;color:#5b6a70;}
 
   /* ---------- CONTATO ---------- */
   .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:stretch;}
@@ -173,33 +166,34 @@
   .map-placeholder{
     border-radius:var(--radius-lg);border:1px solid var(--azul-muito-claro);
     background:var(--creme);
-    min-height:340px;display:flex;align-items:center;justify-content:center;position:relative;
+    min-height:340px;overflow:hidden;position:relative;
   }
+  .map-placeholder iframe{width:100%;height:100%;min-height:340px;border:0;display:block;}
   .map-pin{display:flex;flex-direction:column;align-items:center;gap:10px;color:var(--turquesa-escuro);text-align:center;}
   .map-pin svg{width:46px;height:46px;color:var(--turquesa);}
-  .map-pin span{font-size:13.5px;font-weight:500;max-width:240px;color:var(--linha-escura); opacity: 0.8;}
+  .map-pin span{font-size:13.5px;font-weight:500;max-width:240px;color:#4B5A61;}
 
   /* ---------- FOOTER ---------- */
-  footer{background:var(--texto);color:#D9E2E0;padding:64px 0 28px;}
+  footer{background:var(--texto);color:#C9D3D6;padding:64px 0 28px;}
   .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px;}
   .footer-logo{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
   .footer-logo .brand-name{font-family:var(--font-display);font-size:28px;color:var(--branco);}
   .footer-logo img{width:36px;height:36px;object-fit:contain;}
-  .footer-tagline{font-size:14px;color:#A9B7B4;max-width:260px;}
+  .footer-tagline{font-size:14px;color:#9AA7AB;max-width:260px;}
   footer h4{color:var(--branco);font-size:14.5px;margin-bottom:18px;font-weight:600;}
   footer ul li{margin-bottom:11px;}
-  footer ul a{font-size:14px;color:#A9B7B4;transition:color .18s ease;}
+  footer ul a{font-size:14px;color:#9AA7AB;transition:color .18s ease;}
   footer ul a:hover{color:var(--turquesa-2);}
   .social-row{display:flex;gap:12px;margin-top:18px;}
   .social-row a{
-    width:38px;height:38px;border-radius:50%;border:1px solid #48514E;
+    width:38px;height:38px;border-radius:50%;border:1px solid #38454a;
     display:flex;align-items:center;justify-content:center;transition:background .18s ease, border-color .18s ease;
   }
-  .social-row a svg{width:17px;height:17px;color:#D9E2E0;}
+  .social-row a svg{width:17px;height:17px;color:#C9D3D6;}
   .social-row a:hover{background:var(--turquesa);border-color:var(--turquesa);}
   .footer-bottom{
-    border-top:1px solid #404946;padding-top:24px;display:flex;justify-content:space-between;
-    flex-wrap:wrap;gap:10px;font-size:13px;color:#8B9996;
+    border-top:1px solid #303c40;padding-top:24px;display:flex;justify-content:space-between;
+    flex-wrap:wrap;gap:10px;font-size:13px;color:#7c8a90;
   }
 
   /* ---------- RESPONSIVO ---------- */
@@ -273,8 +267,8 @@
   <div class="container split-grid">
     <div>
       <span class="eyebrow">Qualidade e Confiança</span>
-      <h1>Há 9 anos cuidando de quem faz parte da família</h1>
-      <p class="hero-sub">💙🐾 Uma verdadeira experiência PET começa aqui! Na Pet Clinique, cada detalhe é pensado para que você e seu melhor amigo se sintam acolhidos, cuidados e cheios de amor. Atendimento humanizado, banho e tosa com terapias especiais e aquele toque de carinho que faz toda diferença!</p>
+      <h1>Há 9 anos cuidando de quem faz parte da família!</h1>
+      <p class="hero-sub">Uma verdadeira experiência PET começa aqui! Na Pet Clinique, cada detalhe é pensado para que você e seu melhor amigo se sintam acolhidos, cuidados e cheios de amor. Atendimento humanizado, banho e tosa com terapias especiais e aquele toque de carinho que faz toda diferença!</p>
 
       <ul class="checklist">
         <li><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.6"/><path d="M8 12.5l2.5 2.5L16 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg> Atendimento acolhedor e sem pressa</li>
@@ -317,14 +311,14 @@
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Procedimentos Seguros</strong>
-            <span style="font-size: 14px; color: var(--linha-escura); opacity: 0.8;">Trabalhos conduzidos com técnica e foco total no cliente.</span>
+            <span style="font-size: 14px; color: #4B5A61;">Trabalhos conduzidos com técnica e foco total no cliente.</span>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M8 12l3 3 5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Acompanhamento Próximo</strong>
-            <span style="font-size: 14px; color: var(--linha-escura); opacity: 0.8;">Do diagnóstico inicial ao cuidado pós-atendimento.</span>
+            <span style="font-size: 14px; color: #4B5A61;">Do diagnóstico inicial ao cuidado pós-atendimento.</span>
           </div>
         </li>
       </ul>
@@ -345,14 +339,14 @@
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Recepção Acolhedora</strong>
-            <span style="font-size: 14px; color: var(--linha-escura); opacity: 0.8;">Um primeiro contato calmo e super agradável.</span>
+            <span style="font-size: 14px; color: #4B5A61;">Um primeiro contato calmo e super agradável.</span>
           </div>
         </li>
         <li>
           <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" style="width: 28px; height: 28px;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div>
             <strong style="display: block; font-size: 16px; margin-bottom: 2px;">Atendimento Pontual</strong>
-            <span style="font-size: 14px; color: var(--linha-escura); opacity: 0.8;">Respeitamos o seu tempo e o horário agendado.</span>
+            <span style="font-size: 14px; color: #4B5A61;">Respeitamos o seu tempo e o horário agendado.</span>
           </div>
         </li>
       </ul>
@@ -435,12 +429,8 @@
         </div>
       </div>
 
-      <div class="map-placeholder" role="img" aria-label="Mapa com a localização">
-        <div class="map-pin">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s-7-6.1-7-11a7 7 0 1 1 14 0c0 4.9-7 11-7 11Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" stroke="currentColor" stroke-width="1.6"/></svg>
-          <strong style="font-size:14.5px;">Venha nos visitar!</strong>
-          <a href="https://maps.app.goo.gl/YiEBdTUEhYex8Woj9" style="text-decoration:underline;">Ver rota no Google Maps</a>
-        </div>
+      <div class="map-placeholder">
+        <iframe src="https://www.google.com/maps?q=-13.5414764,-68.5657488&z=16&output=embed" title="Localização de Pet Clinique no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </div>
