@@ -6,5 +6,13 @@
     "WhatsApp": "5565999479475",
     "Demo": "https://demos-landingpages.vercel.app/demos/solar_demo",
     "Status": "Processado"
+  },
+  {
+    "id": 1,
+    "Empresa": "Clinique",
+    "Nicho": "Clínica Veterinária",
+    "WhatsApp": "5565999711417",
+    "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
+    "Status": "Pendente"
   }
 ]
