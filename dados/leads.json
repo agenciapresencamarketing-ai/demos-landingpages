@@ -14,5 +14,13 @@
     "WhatsApp": "5565999711417",
     "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
     "Status": "Processado"
+  },
+  {
+    "id": 2,
+    "Empresa": "PETVET",
+    "Nicho": "Clínica Veterinária",
+    "WhatsApp": "556593474713",
+    "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
+    "Status": "Pendente"
   }
 ]
