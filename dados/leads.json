@@ -7,14 +7,6 @@
     "Status": "Processado"
   },
   {
-    "id": 1,
-    "Empresa": "planeta é o bicho",
-    "Nicho": "Clínica Veterinária",
-    "WhatsApp": "5565999536185",
-    "Demo": "https://demos-landingpages.vercel.app/demos/vet_demo",
-    "Status": "Processado"
-  },
-  {
     "id": 3,
     "Empresa": "OC SOLAR",
     "Nicho": "Energia Solar / Climatização",
