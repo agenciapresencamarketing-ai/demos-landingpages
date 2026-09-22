@@ -34,7 +34,7 @@
   }
 
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth; overflow-x:hidden;}
   @media (prefers-reduced-motion: reduce){
     html{scroll-behavior:auto;}
     *{animation-duration:.001ms !important; transition-duration:.001ms !important;}
@@ -45,6 +45,7 @@
     background:var(--branco);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
   }
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
@@ -126,15 +127,29 @@
   .checklist svg{width:22px;height:22px;flex-shrink:0;color:var(--turquesa);margin-top:1px;}
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
 
-  .hero-photo{height:460px;width:100%;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);border:1px solid var(--azul-muito-claro);}
+  /* FOTOS: usam aspect-ratio em vez de altura fixa, então nunca cortam
+     de forma imprevisível quando a largura da tela muda. object-position
+     prioriza o topo da imagem, onde normalmente está o conteúdo mais
+     importante (rosto, texto de banner, placa). */
+  .hero-photo{
+    width:100%;
+    height:auto;
+    aspect-ratio:4/3;
+    object-fit:cover;
+    object-position:center top;
+    border-radius:var(--radius-lg);
+    box-shadow:var(--shadow-soft);
+    border:1px solid var(--azul-muito-claro);
+  }
+  .hero-photo-wrap{position:relative; max-width:100%;}
   .hero-badge{
     position:absolute;bottom:-22px;left:-22px;background:var(--branco);border-radius:var(--radius-md);
-    box-shadow:var(--shadow-soft);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px;
+    box-shadow:var(--shadow-soft);padding:16px 20px;display:flex;align-items:center;gap:12px;
+    max-width:230px;
   }
   .hero-badge svg{width:34px;height:34px;color:var(--rosa);flex-shrink:0;}
   .hero-badge strong{display:block;font-size:14px;}
   .hero-badge span{font-size:12.5px;color:#4B5A61;}
-  .hero-photo-wrap{position:relative;}
 
   /* ---------- DEPOIMENTOS ---------- */
   .pill{
@@ -166,11 +181,14 @@
   .contact-row svg{width:20px;height:20px;flex-shrink:0;margin-top:2px;opacity:.9;}
   .contact-row div p{font-size:14.5px;opacity:.92;}
   .contact-row div strong{display:block;font-size:14px;opacity:.75;font-weight:500;margin-bottom:2px;}
-  .contact-ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px;}
+  .contact-ctas{display:flex;flex-direction:column;gap:12px;margin-top:28px;position:relative;z-index:2;}
   .contact-ctas .btn{width:100%;}
+  /* Ícone decorativo do gatinho: fica atrás dos botões (z-index) e não
+     recebe cliques (pointer-events:none), então nunca mais tampa o CTA. */
   .contact-cat{
     position:absolute;bottom:-18px;right:-18px;width:120px;height:120px;border-radius:50%;
     background:rgba(255,255,255,.12);display:flex;align-items:center;justify-content:center;
+    z-index:1;pointer-events:none;
   }
   .contact-cat svg{width:56px;height:56px;color:rgba(255,255,255,.55);}
   .map-placeholder{
@@ -209,17 +227,19 @@
   /* ---------- RESPONSIVO ---------- */
   @media (max-width:1000px){
     .split-grid, .split-grid-reverse{grid-template-columns:1fr;}
-    .hero-photo{height:340px;}
     .img-order-mobile{order:-1;}
     .testi-grid{grid-template-columns:repeat(2,1fr);}
     .contact-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr 1fr;}
+    /* Fotos um pouco mais baixas/largas em tablets */
+    .hero-photo{aspect-ratio:16/10;}
   }
   @media (max-width:760px){
     section{padding:64px 0;}
     nav.main-nav{position:fixed;top:78px;left:0;right:0;background:var(--branco);
       border-bottom:1px solid var(--azul-muito-claro);padding:20px 24px;
       transform:translateY(-140%);opacity:0;transition:transform .25s ease, opacity .25s ease;
+      z-index:99;
     }
     nav.main-nav.open{transform:translateY(0);opacity:1;}
     nav.main-nav ul{flex-direction:column;align-items:flex-start;gap:18px;}
@@ -229,6 +249,22 @@
     .split-grid h2{font-size:28px;}
     .testi-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr;gap:32px;}
+    /* Fotos mais quadradas no celular: enquadra melhor rostos/placas
+       verticais e evita cortar texto importante das imagens */
+    .hero-photo{aspect-ratio:1/1;}
+    /* Selo flutuante: em vez de "vazar" para fora da imagem (o que
+       causava rolagem horizontal em telas estreitas), fica contido
+       dentro da largura da imagem, colado na base. */
+    .hero-badge{
+      position:absolute;bottom:12px;left:12px;right:12px;
+      max-width:none;width:calc(100% - 24px);
+    }
+  }
+  @media (max-width:420px){
+    .container{padding:0 18px;}
+    .hero-photo{aspect-ratio:4/5;}
+    .hero-badge{padding:12px 14px;gap:10px;}
+    .hero-badge svg{width:28px;height:28px;}
   }
 </style>
 <meta property="og:title" content="Querido Pet">
