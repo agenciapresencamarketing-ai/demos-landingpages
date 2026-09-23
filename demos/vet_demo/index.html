@@ -30,6 +30,11 @@
     --container:1180px;
   }
 
+  /* Bloqueia rolagem horizontal (evita a página ir de um lado para o outro) */
+  html, body {
+    overflow-x: hidden;
+  }
+
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   @media (prefers-reduced-motion: reduce){
@@ -42,6 +47,7 @@
     background:var(--branco);
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
+    width: 100%;
   }
   img{max-width:100%;display:block;}
   a{color:inherit;text-decoration:none;}
@@ -120,13 +126,6 @@
   .hero-ctas{display:flex;gap:16px;flex-wrap:wrap;}
 
   .hero-photo{height:460px;width:100%;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow-soft);border:1px solid var(--cor-muito-clara);}
-  .hero-badge{
-    position:absolute;bottom:-22px;left:-22px;background:var(--branco);border-radius:var(--radius-md);
-    box-shadow:var(--shadow-soft);padding:16px 20px;display:flex;align-items:center;gap:12px;max-width:230px;
-  }
-  .hero-badge svg{width:34px;height:34px;color:var(--cor-principal);flex-shrink:0;}
-  .hero-badge strong{display:block;font-size:14px;}
-  .hero-badge span{font-size:12.5px;color:#4B5A61;}
   .hero-photo-wrap{position:relative;}
 
   /* ---------- DEPOIMENTOS ---------- */
@@ -299,10 +298,6 @@
 
     <div class="hero-photo-wrap img-order-mobile">
       <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/vet_demo/hero_img_path_hero.webp" alt="Foto Principal de Vida Animal" class="hero-photo">
-      <div class="hero-badge">
-        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 44c-5 0-9-4-9-9 0-4 2-7 5-8-1-3-1-6 1-8 2-2 5-2 7 0 2-2 5-2 7 0 2 2 2 5 1 8 3 1 5 4 5 8 0 5-4 9-9 9" stroke="currentColor" stroke-width="3" transform="translate(-8,-10) scale(0.7)"/></svg>
-        <span><strong>Cuidado de verdade</strong><span>Para cada cliente que passa pela nossa porta</span></span>
-      </div>
     </div>
   </div>
 </section>
