@@ -33,5 +33,12 @@
     "empresa": "Vida Animal",
     "quando": "2026-09-23T03:43:48.768601+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "35d70d5a-c88a-408f-859c-7f272f6823b7",
+    "pasta": "demos/solar_demo",
+    "empresa": "SolarFrio",
+    "quando": "2026-09-24T01:53:04.083114+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
