@@ -40,5 +40,12 @@
     "empresa": "SolarFrio",
     "quando": "2026-09-24T01:53:04.083114+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "836370ca-8c07-42ff-87d5-2f7fc6b0cbd0",
+    "pasta": "demos/solar_demo",
+    "empresa": "Engeselt Solar",
+    "quando": "2026-09-25T15:46:25.229613+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
