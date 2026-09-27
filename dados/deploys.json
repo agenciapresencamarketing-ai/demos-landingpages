@@ -61,5 +61,12 @@
     "empresa": "EcoPower",
     "quando": "2026-09-27T13:34:20.306270+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "c5ec50ba-07f2-403e-a57e-d6a4e1b1107b",
+    "pasta": "demos/vet_demo",
+    "empresa": "Pet Care",
+    "quando": "2026-09-27T15:19:25.070481+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
