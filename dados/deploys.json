@@ -68,5 +68,12 @@
     "empresa": "Pet Care",
     "quando": "2026-09-27T15:19:25.070481+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "07f634de-400a-4bbe-af3a-bb8f902921aa",
+    "pasta": "demos/petshop_demo",
+    "empresa": "",
+    "quando": "2026-09-27T16:19:39.463113+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
