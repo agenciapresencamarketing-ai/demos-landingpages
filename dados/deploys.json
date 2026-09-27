@@ -54,5 +54,12 @@
     "empresa": "Engeselt Solar",
     "quando": "2026-09-25T15:47:45.104650+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "148f81c5-abde-4137-852e-3639fa1709c4",
+    "pasta": "demos/solar_demo",
+    "empresa": "EcoPower",
+    "quando": "2026-09-27T13:34:20.306270+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
