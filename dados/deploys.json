@@ -103,5 +103,12 @@
     "empresa": "Bicholândia",
     "quando": "2026-09-29T01:17:38.061450+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "236b5564-4c56-4347-965e-c7f6f0f58b8b",
+    "pasta": "demos/solar_demo",
+    "empresa": "Marques Energia Solar",
+    "quando": "2026-09-29T01:30:13.546426+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
