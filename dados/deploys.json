@@ -131,5 +131,12 @@
     "empresa": "Marques Energia Solar",
     "quando": "2026-09-29T02:07:57.519952+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "46c2e0b3-dd7d-4414-9e22-fb9dc303336f",
+    "pasta": "demos/solar_demo",
+    "empresa": "Marques Energia Solar",
+    "quando": "2026-09-29T02:10:00.526203+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
