@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marques Energia Solar</title>
 <meta name="description" content="Marques Energia Solar — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
-<link rel="icon" href="logo_2.webp">
+<!-- Favicon corrigido para puxar o arquivo webp -->
+<link rel="icon" href="logo_3.webp" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -107,17 +108,9 @@
     justify-content:space-between;
     gap: 16px;
   }
-  .brand{ display:flex; align-items:center; gap:10px; min-width:0; }
-  .brand img{ height: 38px; width:auto; border-radius: 6px; flex-shrink:0; }
-  .brand span{
-    color: var(--navy);
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size: 1.05rem;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
-  }
+  .brand{ display:flex; align-items:center; min-width:0; }
+  /* Logo com tamanho aumentado para mais destaque */
+  .brand img{ height: 64px; width:auto; border-radius: 6px; flex-shrink:0; object-fit: contain; }
   nav.main-nav{
     display:none;
     gap: 28px;
@@ -499,9 +492,9 @@
     gap: 32px;
     margin-bottom: 36px;
   }
-  .footer-brand{ display:flex; align-items:center; gap:10px; margin-bottom: 14px; }
-  .footer-brand img{ height: 32px; border-radius: 6px; }
-  .footer-brand span{ color: var(--navy); font-family:'Fraunces', serif; font-weight:600; }
+  .footer-brand{ display:flex; align-items:center; min-width: 0; margin-bottom: 14px; }
+  /* Logo do footer aumentada */
+  .footer-brand img{ height: 56px; border-radius: 6px; object-fit: contain; }
   footer h4{ color: var(--navy); font-size: 0.85rem; margin: 0 0 14px 0; }
   footer a:hover{ color: var(--navy-deep); }
   .footer-list li{ margin-bottom: 10px; }
@@ -562,8 +555,7 @@
 <header class="site">
   <div class="header-inner">
     <a class="brand" href="#inicio">
-      <img fetchpriority="high" src="logo_2.webp" alt="Marques Energia Solar">
-      <span>Marques Energia Solar</span>
+      <img fetchpriority="high" src="logo_3.webp" alt="Marques Energia Solar">
     </a>
     <nav class="main-nav">
       <a href="#solucao">Soluções</a>
@@ -837,8 +829,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img loading="lazy" decoding="async" src="logo_2.webp" alt="Marques Energia Solar">
-          <span>Marques Energia Solar</span>
+          <img loading="lazy" decoding="async" src="logo_3.webp" alt="Marques Energia Solar">
         </div>
         <p style="max-width:36ch; font-size:0.88rem;">Projeto, instalação e acompanhamento de sistemas de energia solar fotovoltaica.</p>
       </div>
