@@ -5,8 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marques Energia Solar</title>
 <meta name="description" content="Marques Energia Solar — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
-<!-- Favicon corrigido para puxar o arquivo webp -->
-<link rel="icon" href="logo_3.webp" type="image/webp">
+<!-- Favicon: símbolo da logo (arquivos na mesma pasta do HTML) -->
+<link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -109,8 +111,8 @@
     gap: 16px;
   }
   .brand{ display:flex; align-items:center; min-width:0; }
-  /* Logo com tamanho aumentado para mais destaque */
-  .brand img{ height: 64px; width:auto; border-radius: 6px; flex-shrink:0; object-fit: contain; }
+  /* Logo recortada, maior e mais visível */
+  .brand img{ height: 56px; width:auto; flex-shrink:0; object-fit: contain; }
   nav.main-nav{
     display:none;
     gap: 28px;
@@ -493,8 +495,8 @@
     margin-bottom: 36px;
   }
   .footer-brand{ display:flex; align-items:center; min-width: 0; margin-bottom: 14px; }
-  /* Logo do footer aumentada */
-  .footer-brand img{ height: 56px; border-radius: 6px; object-fit: contain; }
+  /* Logo do footer maior */
+  .footer-brand img{ height: 72px; width:auto; object-fit: contain; }
   footer h4{ color: var(--navy); font-size: 0.85rem; margin: 0 0 14px 0; }
   footer a:hover{ color: var(--navy-deep); }
   .footer-list li{ margin-bottom: 10px; }
@@ -523,6 +525,10 @@
   }
 
   /* Responsive */
+  @media (max-width: 480px){
+    .brand img{ height: 44px; }
+    .header-actions .btn{ padding: 10px 16px; font-size: 0.85rem; }
+  }
   @media (min-width: 720px){
     .hero-inner{ grid-template-columns: 1.1fr 0.9fr; }
     .split{ grid-template-columns: 1fr 1fr; }
@@ -554,8 +560,8 @@
 
 <header class="site">
   <div class="header-inner">
-    <a class="brand" href="#inicio">
-      <img fetchpriority="high" src="logo_3.webp" alt="Marques Energia Solar">
+    <a class="brand" href="#inicio" aria-label="Marques Energia Solar">
+      <img fetchpriority="high" src="logo.webp" alt="Marques Energia Solar">
     </a>
     <nav class="main-nav">
       <a href="#solucao">Soluções</a>
@@ -719,7 +725,7 @@
         <span class="tag">Nossa estrutura</span>
         <h2>Uma equipe própria, perto de você</h2>
         <p class="lede">Trabalhamos a partir de uma estrutura própria em Av. Historiador Rubens de Mendonça, 1836 - Bosque da Saude, Cuiabá - MT, 78050-000, onde ficam o estoque de equipamentos e o time técnico responsável pelas instalações.</p>
-        <a class="btn btn-outline" href="https://maps.app.goo.gl/1g7eGNk7Bw6i3kPk6" target="_blank" rel="noopener">Ver no mapa</a>
+        <a class="btn btn-outline" href="https://maps.app.goo.gl/CLtYCHoK29occNCb8" target="_blank" rel="noopener">Ver no mapa</a>
       </div>
     </div>
     <div class="map-card reveal">
@@ -829,7 +835,7 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img loading="lazy" decoding="async" src="logo_3.webp" alt="Marques Energia Solar">
+          <img loading="lazy" decoding="async" src="logo.webp" alt="Marques Energia Solar">
         </div>
         <p style="max-width:36ch; font-size:0.88rem;">Projeto, instalação e acompanhamento de sistemas de energia solar fotovoltaica.</p>
       </div>
@@ -845,7 +851,7 @@
         <h4>Localização</h4>
         <ul class="footer-list">
           <li>Av. Historiador Rubens de Mendonça, 1836 - Bosque da Saude, Cuiabá - MT, 78050-000</li>
-          <li><a href="https://maps.app.goo.gl/1g7eGNk7Bw6i3kPk6" target="_blank" rel="noopener">Ver no mapa</a></li>
+          <li><a href="https://maps.app.goo.gl/CLtYCHoK29occNCb8" target="_blank" rel="noopener">Ver no mapa</a></li>
         </ul>
       </div>
     </div>
