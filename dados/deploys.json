@@ -145,5 +145,12 @@
     "empresa": "Marques Energia Solar",
     "quando": "2026-09-29T02:12:45.046112+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "e8c09c8a-92cc-44a6-8045-7cab43cc5ff7",
+    "pasta": "demos/petshop_demo",
+    "empresa": "Acco Agropecuária",
+    "quando": "2026-09-30T00:57:57.750844+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
