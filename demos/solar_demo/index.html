@@ -3,29 +3,30 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tangará soluções elétricas</title>
-<meta name="description" content="Tangará soluções elétricas — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
+<title>Seg Energy</title>
+<meta name="description" content="Seg Energy — energia solar fotovoltaica com projeto, instalação e acompanhamento completos.">
 <link rel="icon" href="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy: #0A1C30;
-    --navy-deep: #040C17;
-    --amber: #FF5E00;
-    --amber-deep: #CC4B00;
-    --forest: #1A365D;
-    --bg: #F8FAFC;
-    --bg-soft: #F1F5F9;
-    --bg-mint: #E2E8F0;
-    --bg-mint-deep: #CBD5E1;
-    --ink: #0F172A;
-    --ink-soft: #475569;
-    --line: #E2E8F0;
+    /* Paleta baseada na logo SegEnergy */
+    --navy: #111111; /* Preto da logo para os títulos */
+    --navy-deep: #000000;
+    --amber: #2AA664; /* Verde principal da logo */
+    --amber-deep: #20854F; /* Verde escuro para hover */
+    --forest: #2AA664;
+    --bg: #FFFFFF; /* Fundo branco puro */
+    --bg-soft: #F4FAF6; /* Fundo com leve tom de verde */
+    --bg-mint: #E8F5EE;
+    --bg-mint-deep: #D1EBE0;
+    --ink: #222222; /* Texto escuro padrão */
+    --ink-soft: #555555; /* Texto secundário */
+    --line: #EAEAEA; /* Linhas e bordas neutras */
     --radius: 14px;
     --maxw: 1160px;
-    --shadow: 0 18px 40px -20px rgba(10,28,48,0.22);
+    --shadow: 0 18px 40px -20px rgba(42, 166, 100, 0.22); /* Sombra em tom de verde */
   }
 
   *{ box-sizing: border-box; }
@@ -73,7 +74,7 @@
   .btn:focus-visible{ outline: 3px solid var(--amber); outline-offset: 3px; }
   .btn-primary{
     background: var(--amber);
-    color: #FFFFFF;
+    color: #FFFFFF; /* Alterado para branco para dar contraste com o verde */
   }
   .btn-primary:hover{ background: var(--amber-deep); transform: translateY(-2px); box-shadow: var(--shadow); }
   .btn-ghost{
@@ -81,7 +82,7 @@
     border-color: var(--navy);
     color: var(--navy);
   }
-  .btn-ghost:hover{ border-color: var(--navy-deep); background: rgba(10,28,48,0.06); }
+  .btn-ghost:hover{ border-color: var(--navy-deep); background: rgba(0,0,0,0.04); }
   .btn-outline{
     background: transparent;
     border-color: var(--navy);
@@ -94,30 +95,23 @@
     position: sticky;
     top:0;
     z-index: 50;
-    background: rgba(248,250,252,0.92);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(6px);
     box-shadow: 0 1px 0 var(--line);
   }
   .header-inner{
     max-width: var(--maxw);
     margin: 0 auto;
-    padding: 14px 24px;
+    padding: 12px 24px;
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap: 16px;
   }
-  .brand{ display:flex; align-items:center; gap:10px; min-width:0; }
-  .brand img{ height: 38px; width:auto; border-radius: 6px; flex-shrink:0; }
-  .brand span{
-    color: var(--navy);
-    font-family:'Fraunces', serif;
-    font-weight:600;
-    font-size: 1.05rem;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow: ellipsis;
-  }
+  .brand{ display:flex; align-items:center; min-width:0; }
+  /* Tamanho da logo aumentado para 60px para melhor visualização */
+  .brand img{ height: 60px; width:auto; flex-shrink:0; }
+  
   nav.main-nav{
     display:none;
     gap: 28px;
@@ -128,7 +122,7 @@
     font-size: 0.92rem;
     font-weight: 600;
   }
-  nav.main-nav a:hover{ color: var(--navy); }
+  nav.main-nav a:hover{ color: var(--amber); }
   .header-actions{ display:flex; align-items:center; gap: 12px; }
   .menu-toggle{
     background: transparent;
@@ -151,14 +145,15 @@
   .mobile-nav{
     display:none;
     flex-direction:column;
-    background: var(--bg-mint-deep);
+    background: #FFFFFF;
     padding: 8px 24px 20px;
+    border-bottom: 1px solid var(--line);
   }
   .mobile-nav.open{ display:flex; }
   .mobile-nav a{
     color: var(--ink);
     padding: 12px 0;
-    border-bottom: 1px solid rgba(15,23,42,0.12);
+    border-bottom: 1px solid var(--line);
     font-weight:600;
     font-size: 0.95rem;
   }
@@ -167,7 +162,7 @@
   .hero{
     position:relative;
     color: var(--ink);
-    background: linear-gradient(180deg, var(--bg-mint), var(--bg));
+    background: linear-gradient(180deg, var(--bg-soft), var(--bg));
     background-size: cover;
     background-position: center;
     padding: 64px 0 88px;
@@ -199,7 +194,7 @@
 
   /* Stats */
   .stats{
-    background: var(--bg-mint-deep);
+    background: var(--bg-mint);
     color: var(--ink);
   }
   .stats .wrap{
@@ -232,7 +227,7 @@
     font-size: 0.8rem;
     font-weight:700;
     color: var(--amber-deep);
-    background: rgba(255,94,0,0.15);
+    background: var(--bg-mint);
     padding: 6px 14px;
     border-radius: 999px;
     margin-bottom: 14px;
@@ -252,7 +247,7 @@
   }
   .step-num{
     font-family:'Fraunces', serif;
-    color: var(--amber-deep);
+    color: var(--amber);
     font-size: 1.5rem;
     font-weight:600;
     margin-bottom: 10px;
@@ -271,7 +266,7 @@
     border-radius: var(--radius);
     padding: 30px;
   }
-  .stars{ color: var(--amber-deep); letter-spacing: 2px; margin-bottom: 14px; font-size: 0.95rem; }
+  .stars{ color: var(--amber); letter-spacing: 2px; margin-bottom: 14px; font-size: 0.95rem; }
   .testimonial p.quote{
     font-family:'Fraunces', serif;
     font-size: 1.08rem;
@@ -320,7 +315,7 @@
     cursor:pointer;
     transition: border-color .15s ease, background-color .15s ease, color .15s ease;
   }
-  .sim-chip:hover{ border-color: var(--amber-deep); }
+  .sim-chip:hover{ border-color: var(--amber); }
   .sim-chip.active{
     background: var(--navy);
     border-color: var(--navy);
@@ -353,7 +348,7 @@
     color: var(--ink);
     min-width: 0;
   }
-  .sim-custom-row input:focus-visible{ outline: 2px solid var(--amber-deep); }
+  .sim-custom-row input:focus-visible{ outline: 2px solid var(--amber); }
   .sim-result{
     margin-top: 26px;
     padding-top: 24px;
@@ -377,7 +372,7 @@
     font-weight: 600;
     color: var(--navy);
   }
-  .sim-result-highlight{ color: var(--forest); }
+  .sim-result-highlight{ color: var(--amber); }
   .sim-arrow{ color: var(--ink-soft); font-size: 1.3rem; }
   .sim-savings{
     color: var(--ink-soft);
@@ -416,8 +411,8 @@
     display:flex; align-items:center; justify-content:center;
     transition: border-color .15s ease, background-color .15s ease;
   }
-  .carousel-btn:hover{ border-color: var(--amber-deep); }
-  .carousel-btn:focus-visible{ outline: 2px solid var(--amber-deep); }
+  .carousel-btn:hover{ border-color: var(--amber); }
+  .carousel-btn:focus-visible{ outline: 2px solid var(--amber); }
   .carousel-dots{ display:flex; gap: 8px; }
   .carousel-dot{
     width: 9px; height: 9px;
@@ -427,7 +422,7 @@
     cursor:pointer;
     padding:0;
   }
-  .carousel-dot.active{ background: var(--amber-deep); }
+  .carousel-dot.active{ background: var(--amber); }
 
   /* Mapa */
   .map-card{
@@ -474,7 +469,7 @@
     color: var(--navy);
     transition: transform .2s ease;
   }
-  .faq-item[open] .faq-icon{ transform: rotate(45deg); }
+  .faq-item[open] .faq-icon{ transform: rotate(45deg); background-color: var(--amber); color: #fff; border-color: var(--amber); }
   .faq-item p{ color: var(--ink-soft); margin: 14px 0 0 0; font-size: 0.96rem; max-width: 62ch; }
 
   /* CTA final */
@@ -488,7 +483,7 @@
 
   /* Footer */
   footer{
-    background: var(--bg-mint-deep);
+    background: var(--bg-mint);
     color: var(--ink-soft);
     padding: 52px 0 26px;
     font-size: 0.92rem;
@@ -502,10 +497,10 @@
   .footer-brand img{ height: 32px; border-radius: 6px; }
   .footer-brand span{ color: var(--navy); font-family:'Fraunces', serif; font-weight:600; }
   footer h4{ color: var(--navy); font-size: 0.85rem; margin: 0 0 14px 0; }
-  footer a:hover{ color: var(--navy-deep); }
+  footer a:hover{ color: var(--amber-deep); }
   .footer-list li{ margin-bottom: 10px; }
   .footer-bottom{
-    border-top: 1px solid rgba(15,23,42,0.15);
+    border-top: 1px solid rgba(0,0,0,0.08);
     padding-top: 20px;
     font-size: 0.82rem;
     display:flex;
@@ -547,13 +542,13 @@
     .hero{ padding: 88px 0 110px; }
   }
 </style>
-<meta property="og:title" content="Tangará soluções elétricas">
+<meta property="og:title" content="Seg Energy">
 <meta property="og:description" content="Projeto personalizado, instalação certificada e economia garantida desde o primeiro mês.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://demos-landingpages.vercel.app/demos/solar_demo">
 <meta property="og:image" content="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp">
 <meta name="twitter:card" content="summary_large_image">
-<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Tangará soluções elétricas", "telephone": "(65) 9680-2362", "address": "R. Alziro Zarur, 363 - s, Tangará da Serra - MT, 78306-124", "url": "https://demos-landingpages.vercel.app/demos/solar_demo", "sameAs": ["https://instagram.com/tangara_solucoes"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Seg Energy", "telephone": "(65) 99693-0076", "address": "Av. Jatobá - Jardim Alvorada, Campo Novo do Parecis - MT, 78360-000", "url": "https://demos-landingpages.vercel.app/demos/solar_demo", "sameAs": ["https://instagram.com/segenergy_camponovo"]}</script>
 <style>.wa-float{position:fixed;right:20px;bottom:20px;z-index:9999;width:58px;height:58px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.25);transition:transform .15s ease;}.wa-float:hover{transform:scale(1.08);}.wa-float svg{width:30px;height:30px;fill:#fff;}</style>
 </head>
 <body>
@@ -561,8 +556,7 @@
 <header class="site">
   <div class="header-inner">
     <a class="brand" href="#inicio">
-      <img fetchpriority="high" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="Tangará soluções elétricas">
-      <span>Tangará soluções elétricas</span>
+      <img fetchpriority="high" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="Seg Energy">
     </a>
     <nav class="main-nav">
       <a href="#solucao">Soluções</a>
@@ -572,7 +566,7 @@
       <a href="#contato">Contato</a>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-primary" href="https://wa.me/556596802362" target="_blank" rel="noopener">Falar no WhatsApp</a>
+      <a class="btn btn-primary" href="https://wa.me/5565996930076" target="_blank" rel="noopener">Falar no WhatsApp</a>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span>
       </button>
@@ -590,16 +584,16 @@
 <section class="hero" id="inicio">
   <div class="hero-inner">
     <div>
-      <h1>Energia Solar que Reduz sua Conta de Luz em até 95%</h1>
+      <h1>Energia solar que reduz sua conta de luz em até 95%</h1>
       <p class="lede">Projeto personalizado, instalação certificada e economia garantida desde o primeiro mês.</p>
       <div class="hero-cta">
-        <a class="btn btn-primary" href="https://wa.me/556596802362" target="_blank" rel="noopener">Pedir simulação gratuita</a>
+        <a class="btn btn-primary" href="https://wa.me/5565996930076" target="_blank" rel="noopener">Pedir simulação gratuita</a>
         <a class="btn btn-ghost" href="#como-funciona">Ver como funciona</a>
       </div>
       <p class="hero-note">Resposta no mesmo dia, sem compromisso.</p>
     </div>
     <div class="hero-media">
-      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/hero_img_path_hero.webp" alt="Sistema de energia solar instalado por Tangará soluções elétricas">
+      <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/hero_img_path_hero.webp" alt="Sistema de energia solar instalado por Seg Energy">
     </div>
   </div>
 </section>
@@ -644,7 +638,7 @@
         <span class="tag">Energia solar fotovoltaica</span>
         <h2>Gere a própria energia e veja a diferença na conta</h2>
         <p class="lede">Projetamos e instalamos um sistema dimensionado para o seu consumo real. A energia gerada vira crédito junto à concessionária e reduz sua conta em até 95%, com 25 anos anos de garantia em todo o sistema.</p>
-        <a class="btn btn-outline" href="https://wa.me/556596802362" target="_blank" rel="noopener">Simular minha economia</a>
+        <a class="btn btn-outline" href="https://wa.me/5565996930076" target="_blank" rel="noopener">Simular minha economia</a>
       </div>
     </div>
   </div>
@@ -684,7 +678,7 @@
           </div>
         </div>
         <p class="sim-savings" id="simSavings"></p>
-        <a class="btn btn-primary" id="simCta" href="https://wa.me/556596802362" target="_blank" rel="noopener">Quero essa economia</a>
+        <a class="btn btn-primary" id="simCta" href="https://wa.me/5565996930076" target="_blank" rel="noopener">Quero essa economia</a>
       </div>
     </div>
   </div>
@@ -720,17 +714,17 @@
   <div class="wrap">
     <div class="split reverse reveal">
       <div class="media">
-        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/local_img_path_local.webp" alt="Sede e estrutura de Tangará soluções elétricas">
+        <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/local_img_path_local.webp" alt="Sede e estrutura de Seg Energy">
       </div>
       <div>
         <span class="tag">Nossa estrutura</span>
         <h2>Uma equipe própria, perto de você</h2>
-        <p class="lede">Trabalhamos a partir de uma estrutura própria em R. Alziro Zarur, 363 - s, Tangará da Serra - MT, 78306-124, onde ficam o estoque de equipamentos e o time técnico responsável pelas instalações.</p>
-        <a class="btn btn-outline" href="https://maps.app.goo.gl/PuPtaJyXTth8UL9N8" target="_blank" rel="noopener">Ver no mapa</a>
+        <p class="lede">Trabalhamos a partir de uma estrutura própria em Av. Jatobá - Jardim Alvorada, Campo Novo do Parecis - MT, 78360-000, onde ficam o estoque de equipamentos e o time técnico responsável pelas instalações.</p>
+        <a class="btn btn-outline" href="https://maps.app.goo.gl/D6T67qHi9dcVikvB6" target="_blank" rel="noopener">Ver no mapa</a>
       </div>
     </div>
     <div class="map-card reveal">
-      <iframe src="https://maps.google.com/maps?q=Tangara%20solu%C3%A7%C3%B5es&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Localização de Tangará soluções elétricas no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <iframe src="https://maps.google.com/maps?q=SegEnergy%20energia%20solar&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Localização de Seg Energy no mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
     </div>
   </div>
 </section>
@@ -826,8 +820,8 @@
     <div class="reveal">
       <h2>Pronto para gerar a sua própria energia?</h2>
       <p class="lede">Fale agora com a nossa equipe e receba uma simulação gratuita para o seu telhado.</p>
-      <a class="btn btn-primary" href="https://wa.me/556596802362" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
-    </div>
+      <a class="btn btn-primary" href="https://wa.me/5565996930076" target="_blank" rel="noopener">Falar no WhatsApp agora</a>
+      </div>
   </div>
 </section>
 
@@ -836,30 +830,29 @@
     <div class="footer-grid">
       <div>
         <div class="footer-brand">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="Tangará soluções elétricas">
-          <span>Tangará soluções elétricas</span>
+          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/agenciapresencamarketing-ai/demos-landingpages/main/demos/solar_demo/logo_path_logo.webp" alt="Seg Energy">
         </div>
         <p style="max-width:36ch; font-size:0.88rem;">Projeto, instalação e acompanhamento de sistemas de energia solar fotovoltaica.</p>
       </div>
       <div>
         <h4>Contato</h4>
         <ul class="footer-list">
-          <li><a href="tel:(65) 9680-2362">(65) 9680-2362</a></li>
-          <li><a href="https://wa.me/556596802362" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li><a href="https://instagram.com/tangara_solucoes" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="tel:(65) 99693-0076">(65) 99693-0076</a></li>
+          <li><a href="https://wa.me/5565996930076" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="https://instagram.com/segenergy_camponovo" target="_blank" rel="noopener">Instagram</a></li>
         </ul>
       </div>
       <div>
         <h4>Localização</h4>
         <ul class="footer-list">
-          <li>R. Alziro Zarur, 363 - s, Tangará da Serra - MT, 78306-124</li>
-          <li><a href="https://maps.app.goo.gl/PuPtaJyXTth8UL9N8" target="_blank" rel="noopener">Ver no mapa</a></li>
+          <li>Av. Jatobá - Jardim Alvorada, Campo Novo do Parecis - MT, 78360-000</li>
+          <li><a href="https://maps.app.goo.gl/D6T67qHi9dcVikvB6" target="_blank" rel="noopener">Ver no mapa</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span id="copyYear">Tangará soluções elétricas. Todos os direitos reservados.</span>
-      <span>R. Alziro Zarur, 363 - s, Tangará da Serra - MT, 78306-124</span>
+      <span id="copyYear">Seg Energy. Todos os direitos reservados.</span>
+      <span>Av. Jatobá - Jardim Alvorada, Campo Novo do Parecis - MT, 78360-000</span>
     </div>
   </div>
 </footer>
@@ -1017,6 +1010,6 @@
   })();
 </script>
 <script>document.addEventListener('click',function(e){var a=e.target.closest?e.target.closest('a[href*="wa.me"],a[href^="tel:"]'):null;if(!a)return;if(window.fbq)fbq('track','Contact');if(window.gtag)gtag('event','generate_lead',{link_url:a.href});});</script>
-<a class="wa-float" href="https://wa.me/556596802362" target="_blank" rel="noopener" aria-label="Falar com Tangará soluções elétricas no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3Z"/></svg></a>
+<a class="wa-float" href="https://wa.me/5565996930076" target="_blank" rel="noopener" aria-label="Falar com Seg Energy no WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4l.8 2c.1.2.1.4 0 .6l-.4.6c-.1.2-.3.4-.1.7.2.3.8 1.3 1.7 2.1 1.2 1.1 2.2 1.4 2.5 1.5.3.1.5.1.7-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .7-.2 1.3Z"/></svg></a>
 </body>
 </html>
