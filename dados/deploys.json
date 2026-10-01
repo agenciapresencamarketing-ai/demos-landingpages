@@ -166,5 +166,12 @@
     "empresa": "Quatro patas",
     "quando": "2026-10-01T01:47:52.106390+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "9623ea1a-8208-4715-894d-594e256f8a55",
+    "pasta": "demos/solar_demo",
+    "empresa": "Seg Energy",
+    "quando": "2026-10-01T01:53:15.020726+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
