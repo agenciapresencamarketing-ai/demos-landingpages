@@ -159,5 +159,12 @@
     "empresa": "Tangará soluções elétricas",
     "quando": "2026-09-30T01:10:10.024277+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "e8f7642e-d848-4eb4-8292-c3360c2e4472",
+    "pasta": "demos/petshop_demo",
+    "empresa": "Quatro patas",
+    "quando": "2026-10-01T01:47:52.106390+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
