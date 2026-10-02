@@ -180,5 +180,12 @@
     "empresa": "",
     "quando": "2026-10-02T17:33:27.525716+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "3e56ed56-f08c-4d1f-b894-602779b3b772",
+    "pasta": "demos/petshop_demo",
+    "empresa": "Amicão",
+    "quando": "2026-10-02T17:34:49.301593+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
