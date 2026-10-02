@@ -187,5 +187,12 @@
     "empresa": "Amicão",
     "quando": "2026-10-02T17:34:49.301593+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "e203d679-8130-482c-8b22-a96c70c82f16",
+    "pasta": "demos/solar_demo",
+    "empresa": "Vitoria Solar",
+    "quando": "2026-10-02T17:47:05.829726+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
