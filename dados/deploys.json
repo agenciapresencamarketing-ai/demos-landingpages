@@ -173,5 +173,12 @@
     "empresa": "Seg Energy",
     "quando": "2026-10-01T01:53:15.020726+00:00",
     "por": "agenciapresencamarketing-ai"
+  },
+  {
+    "id": "7de7a6db-d55d-4723-87f9-6bac08305c09",
+    "pasta": "demos/petshop_demo",
+    "empresa": "",
+    "quando": "2026-10-02T17:33:27.525716+00:00",
+    "por": "agenciapresencamarketing-ai"
   }
 ]
